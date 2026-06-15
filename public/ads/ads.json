@@ -1,0 +1,25 @@
+{
+  "ads": [
+    {
+      "id": "ft-001",
+      "file": "ft-001.png",
+      "name": "Volg de natuur",
+      "format": "1:1",
+      "brand": "Follow This"
+    },
+    {
+      "id": "ft-002",
+      "file": "ft-002.png",
+      "name": "Samen sterker",
+      "format": "4:5",
+      "brand": "Follow This"
+    },
+    {
+      "id": "ft-003",
+      "file": "ft-003.png",
+      "name": "Kom in actie",
+      "format": "1.91:1",
+      "brand": "Follow This"
+    }
+  ]
+}

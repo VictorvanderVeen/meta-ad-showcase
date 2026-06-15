@@ -1,0 +1,239 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ── State messages ── */
+.state-msg {
+  padding: 24px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.state-error {
+  background: #fdecea;
+  border: 1px solid #f5c2c0;
+  border-radius: 10px;
+  color: #b3261e;
+}
+
+.state-hint {
+  font-size: 13px;
+}
+
+code {
+  background: #eceef1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* ── Summary bar ── */
+.summary-bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.summary-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.count {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1f3f5;
+}
+.count-approved { background: #e7f6ec; color: #1b7a3d; }
+.count-rejected { background: #fdecea; color: #b3261e; }
+.count-pending { background: #fff4e5; color: #a35a00; }
+
+.summary-filters {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.filter-btn,
+.btn-export,
+.btn-reset {
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover { background: #f3f4f6; }
+.filter-btn.active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-export {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+.btn-export:hover { background: #333; }
+.btn-reset:hover { background: #f3f4f6; }
+
+/* ── Ad grid ── */
+.ad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.ad-card {
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.ad-card.status-approved { border-color: #34c759; }
+.ad-card.status-rejected { border-color: #ff3b30; }
+
+.ad-card-media {
+  position: relative;
+  background: #f1f3f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.ad-card-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.status-pill {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.92);
+}
+.pill-approved { color: #1b7a3d; }
+.pill-rejected { color: #b3261e; }
+.pill-pending { color: #a35a00; }
+
+.ad-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ad-card-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ad-card-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.meta-tag {
+  font-size: 12px;
+  color: #6b7280;
+  background: #f1f3f5;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.ad-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-approve,
+.btn-reject {
+  flex: 1;
+  padding: 9px 0;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-approve:hover { border-color: #34c759; color: #1b7a3d; }
+.btn-approve.active {
+  background: #34c759;
+  border-color: #34c759;
+  color: #fff;
+}
+
+.btn-reject:hover { border-color: #ff3b30; color: #b3261e; }
+.btn-reject.active {
+  background: #ff3b30;
+  border-color: #ff3b30;
+  color: #fff;
+}
+
+.ad-card-comment {
+  width: 100%;
+  resize: vertical;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.ad-card-comment:focus {
+  outline: none;
+  border-color: #1a1a1a;
+}
