@@ -1,25 +1,39 @@
 {
   "ads": [
     {
-      "id": "ft-001",
-      "file": "ft-001.png",
-      "name": "Volg de natuur",
+      "id": "nsgk-vriendjes-buurt",
+      "file": "Vriendjes_buurt.png",
+      "name": "Het kan toch niet dat een kind geen vriendjes in de buurt heeft?",
       "format": "1:1",
-      "brand": "Follow This"
+      "brand": "Het Gehandicapte Kind"
     },
     {
-      "id": "ft-002",
-      "file": "ft-002.png",
-      "name": "Samen sterker",
-      "format": "4:5",
-      "brand": "Follow This"
+      "id": "nsgk-samen-spelen",
+      "file": "Samen_spelen.png",
+      "name": "Samen spelen in de buurt. Waarom kan dat niet voor elk kind?",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
     },
     {
-      "id": "ft-003",
-      "file": "ft-003.png",
-      "name": "Kom in actie",
-      "format": "1.91:1",
-      "brand": "Follow This"
+      "id": "nsgk-school-hoek",
+      "file": "School_hoek.png",
+      "name": "Vind jij ook dat elk kind een school om de hoek verdient? Zeg het.",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "nsgk-klas-welkom",
+      "file": "Klas_welkom.png",
+      "name": "In een klas waar iedereen welkom is, leert uw kleinkind van iedereen.",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "nsgk-leer-meer",
+      "file": "Leer_meer.png",
+      "name": "Van jouw kind leer ik meer. En hij van mij.",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
     }
   ]
 }
