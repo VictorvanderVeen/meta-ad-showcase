@@ -1,26 +1,42 @@
 import { useEffect, useMemo, useState } from 'react';
 import AdCard from './components/AdCard';
 import SummaryBar from './components/SummaryBar';
-import { loadAds } from './lib/ads';
-import { getAllDecisions, setDecision, clearDecisions, EMPTY_DECISION } from './lib/storage';
+import { loadAds, client } from './lib/ads';
+import {
+  getAllDecisions,
+  setDecision,
+  clearDecisions,
+  syncWithRemote,
+  onSyncStatus,
+  EMPTY_DECISION,
+} from './lib/storage';
 import { buildCsv, downloadCsv } from './lib/csv';
 import './App.css';
 
 export default function App() {
   const [ads, setAds] = useState([]);
+  const [clientName, setClientName] = useState('');
   const [decisions, setDecisions] = useState({});
   const [status, setStatus] = useState('loading'); // loading | ready | error
   const [error, setError] = useState('');
   const [filter, setFilter] = useState('all');
+  const [syncStatus, setSyncStatus] = useState('local');
+
+  useEffect(() => onSyncStatus(setSyncStatus), []);
 
   useEffect(() => {
     let cancelled = false;
     loadAds()
-      .then((list) => {
+      .then(({ ads: list, clientName: name }) => {
         if (cancelled) return;
         setAds(list);
+        setClientName(name);
         setDecisions(getAllDecisions());
         setStatus('ready');
+        // Show local decisions right away, then merge in what the sheet has.
+        return syncWithRemote(list).then((merged) => {
+          if (!cancelled) setDecisions(merged);
+        });
       })
       .catch((err) => {
         if (cancelled) return;
@@ -44,12 +60,11 @@ export default function App() {
 
   const handleReset = () => {
     if (!window.confirm('Alle beslissingen en opmerkingen wissen?')) return;
-    clearDecisions();
-    setDecisions({});
+    setDecisions(clearDecisions());
   };
 
   const handleExport = () => {
-    downloadCsv('meta-ad-goedkeuring.csv', buildCsv(ads, decisions));
+    downloadCsv(`meta-ad-goedkeuring-${client.slug}.csv`, buildCsv(ads, decisions));
   };
 
   const counts = useMemo(() => {
@@ -69,7 +84,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Meta Ad Showcase</h1>
+        <h1>Meta Ad Showcase{clientName ? ` — ${clientName}` : ''}</h1>
         <p className="app-subtitle">Beoordeel en keur de advertenties goed of af.</p>
       </header>
 
@@ -79,13 +94,13 @@ export default function App() {
         <div className="state-msg state-error">
           <p>Kon de advertenties niet laden: {error}</p>
           <p className="state-hint">
-            Zorg dat <code>public/ads/ads.json</code> bestaat en naar bestaande PNG&apos;s verwijst.
+            Zorg dat <code>public/ads/{client.slug}/ads.json</code> bestaat en naar bestaande PNG&apos;s verwijst.
           </p>
         </div>
       )}
 
       {status === 'ready' && ads.length === 0 && (
-        <p className="state-msg">Nog geen advertenties. Voeg PNG&apos;s toe in <code>public/ads/</code>.</p>
+        <p className="state-msg">Nog geen advertenties. Voeg PNG&apos;s toe in <code>public/ads/{client.slug}/</code>.</p>
       )}
 
       {status === 'ready' && ads.length > 0 && (
@@ -94,6 +109,7 @@ export default function App() {
             counts={counts}
             filter={filter}
             onFilter={setFilter}
+            syncStatus={syncStatus}
             onExport={handleExport}
             onReset={handleReset}
           />

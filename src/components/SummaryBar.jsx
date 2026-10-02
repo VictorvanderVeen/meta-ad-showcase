@@ -5,7 +5,13 @@ const FILTERS = [
   { id: 'rejected', label: 'Afgewezen' },
 ];
 
-export default function SummaryBar({ counts, filter, onFilter, onExport, onReset }) {
+const SYNC_LABEL = {
+  saving: 'Opslaan…',
+  saved: '✓ Opgeslagen',
+  offline: 'Niet verstuurd. Controleer je internetverbinding.',
+};
+
+export default function SummaryBar({ counts, filter, onFilter, syncStatus, onExport, onReset }) {
   return (
     <div className="summary-bar">
       <div className="summary-counts">
@@ -29,6 +35,11 @@ export default function SummaryBar({ counts, filter, onFilter, onExport, onReset
       </div>
 
       <div className="summary-actions">
+        {SYNC_LABEL[syncStatus] && (
+          <span className={`sync-status sync-${syncStatus}`} role="status">
+            {SYNC_LABEL[syncStatus]}
+          </span>
+        )}
         <button type="button" className="btn-export" onClick={onExport}>
           Exporteer CSV
         </button>

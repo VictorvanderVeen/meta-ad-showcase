@@ -1,0 +1,68 @@
+{
+  "client": "Hamlin Fistula Nederland",
+  "ads": [
+    {
+      "id": "hamlin-p2601chfn_01_genet_verborgen-feed-square",
+      "file": "P2601CHFN_01_genet_verborgen-feed-square.jpg",
+      "name": "17 jaar verborgen voor de wereld",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_02_genet_bevalling-feed-square",
+      "file": "P2601CHFN_02_genet_bevalling-feed-square.jpg",
+      "name": "Eén bevalling veranderde alles",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_03_genet_nietalleen-feed-square",
+      "file": "P2601CHFN_03_genet_nietalleen-feed-square.jpg",
+      "name": "Genet is niet langer alleen",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_04_pakket_bedrag-feed-square",
+      "file": "P2601CHFN_04_pakket_bedrag-feed-square.jpg",
+      "name": "1 verzorgingspakket: €40",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_05_pakket_inhoud-feed-square",
+      "file": "P2601CHFN_05_pakket_inhoud-feed-square.jpg",
+      "name": "Een deken. Een nachthemd. Een jurk.",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_06_pakket_eerstestap-feed-square",
+      "file": "P2601CHFN_06_pakket_eerstestap-feed-square.jpg",
+      "name": "De eerste stap naar herstel",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_07_donor_volgende-feed-square",
+      "file": "P2601CHFN_07_donor_volgende-feed-square.jpg",
+      "name": "De volgende vrouw krijgt het van jou",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_08_donor_jurk-feed-square",
+      "file": "P2601CHFN_08_donor_jurk-feed-square.jpg",
+      "name": "Een jurk voor de dag dat ze naar huis gaat",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn_09_donor_vraag-feed-square",
+      "file": "P2601CHFN_09_donor_vraag-feed-square.jpg",
+      "name": "Wat doet €40 in Ethiopië?",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    }
+  ]
+}

@@ -106,8 +106,16 @@ code {
 
 .summary-actions {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
+
+.sync-status {
+  font-size: 13px;
+  color: #6b7280;
+}
+.sync-saved { color: #1b7a3d; }
+.sync-offline { color: #b3261e; font-weight: 500; }
 
 .btn-export {
   background: #1a1a1a;

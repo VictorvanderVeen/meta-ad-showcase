@@ -1,71 +1,72 @@
 {
+  "client": "Het Gehandicapte Kind",
   "ads": [
     {
       "id": "nsgk-vriendjes-buurt",
-      "file": "Vriendjes_buurt.png",
+      "file": "Vriendjes_buurt.jpg",
       "name": "Het kan toch niet dat een kind geen vriendjes in de buurt heeft? (foto 1)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-samen-spelen",
-      "file": "Samen_spelen.png",
+      "file": "Samen_spelen.jpg",
       "name": "Samen spelen in de buurt. Waarom kan dat niet voor elk kind? (foto 1)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-school-hoek",
-      "file": "School_hoek.png",
+      "file": "School_hoek.jpg",
       "name": "Vind jij ook dat elk kind een school om de hoek verdient? Zeg het. (foto 1)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-klas-welkom",
-      "file": "Klas_welkom.png",
+      "file": "Klas_welkom.jpg",
       "name": "In een klas waar iedereen welkom is, leert uw kleinkind van iedereen. (foto 1)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-leer-meer",
-      "file": "Leer_meer.png",
+      "file": "Leer_meer.jpg",
       "name": "Van jouw kind leer ik meer. En hij van mij. (foto 1)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-vriendjes-buurt-2",
-      "file": "Vriendjes_buurt-1.png",
+      "file": "Vriendjes_buurt-1.jpg",
       "name": "Het kan toch niet dat een kind geen vriendjes in de buurt heeft? (foto 2)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-samen-spelen-2",
-      "file": "Samen_spelen-1.png",
+      "file": "Samen_spelen-1.jpg",
       "name": "Samen spelen in de buurt. Waarom kan dat niet voor elk kind? (foto 2)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-school-hoek-2",
-      "file": "School_hoek-1.png",
+      "file": "School_hoek-1.jpg",
       "name": "Vind jij ook dat elk kind een school om de hoek verdient? Zeg het. (foto 2)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-klas-welkom-2",
-      "file": "Klas_welkom-1.png",
+      "file": "Klas_welkom-1.jpg",
       "name": "In een klas waar iedereen welkom is, leert uw kleinkind van iedereen. (foto 2)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
     },
     {
       "id": "nsgk-leer-meer-2",
-      "file": "Leer_meer-1.png",
+      "file": "Leer_meer-1.jpg",
       "name": "Van jouw kind leer ik meer. En hij van mij. (foto 2)",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind"
