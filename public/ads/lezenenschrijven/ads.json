@@ -1,0 +1,68 @@
+{
+  "client": "Stichting Lezen en Schrijven",
+  "ads": [
+    {
+      "id": "lezenenschrijven-ls_quiz_01_goed-spellen-feed-square",
+      "file": "LS_quiz_01_goed-spellen-feed-square.jpg",
+      "name": "Denk je dat je goed kunt spellen?",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_02_dat-denkt-iedereen-feed-square",
+      "file": "LS_quiz_02_dat-denkt-iedereen-feed-square.jpg",
+      "name": "Goed in spelling? Dat denkt iedereen.",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_03_alle-10-fouten-feed-square",
+      "file": "LS_quiz_03_alle-10-fouten-feed-square.jpg",
+      "name": "Bijna niemand vindt alle 10 fouten.",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_04_1-op-de-5-feed-square",
+      "file": "LS_quiz_04_1-op-de-5-feed-square.jpg",
+      "name": "1 op de 5 heeft moeite met taal.",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_05_3-miljoen-feed-square",
+      "file": "LS_quiz_05_3-miljoen-feed-square.jpg",
+      "name": "3 miljoen Nederlanders lezen slecht.",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_06_niet-vanzelfsprekend-feed-square",
+      "file": "LS_quiz_06_niet-vanzelfsprekend-feed-square.jpg",
+      "name": "Taal is niet vanzelfsprekend.",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_07_rythme-of-ritme-feed-square",
+      "file": "LS_quiz_07_rythme-of-ritme-feed-square.jpg",
+      "name": "Welk woord is fout: rythme of ritme?",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_08_elke-dag-feed-square",
+      "file": "LS_quiz_08_elke-dag-feed-square.jpg",
+      "name": "Je schrijft het elke dag. Maar goed?",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    },
+    {
+      "id": "lezenenschrijven-ls_quiz_09_je-ziet-het-meteen-feed-square",
+      "file": "LS_quiz_09_je-ziet-het-meteen-feed-square.jpg",
+      "name": "Je ziet het meteen. Of toch niet?",
+      "format": "1:1",
+      "brand": "Stichting Lezen en Schrijven"
+    }
+  ]
+}
