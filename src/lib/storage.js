@@ -3,16 +3,21 @@
  *
  * The whole app talks to this module — never to localStorage or the network
  * directly. Storage is local-first: every change lands in localStorage at once
- * and is then pushed to a Google Sheet (Apps Script web app, see apps-script/).
- * On load both sides are merged per ad, newest updatedAt wins.
+ * and is then pushed to PocketBase (collection adshowcase_beoordelingen, see
+ * scripts/pocketbase-setup.mjs). On load both sides are merged per ad, newest
+ * updatedAt wins.
  *
  * A decision is: { status: 'pending' | 'approved' | 'rejected', comment: string, updatedAt?: string }
  */
 
+import { client } from './ads';
+
 const KEY = 'mas-decisions-v1';
 
-// Apps Script web app URL (…/exec). Empty = local-only, nothing leaves the browser.
-const ENDPOINT = import.meta.env.VITE_SHEET_ENDPOINT || '';
+// PocketBase server. Empty = local-only, nothing leaves the browser.
+const BASE = (import.meta.env.VITE_POCKETBASE_URL || '').replace(/\/$/, '');
+// The collection id rather than its name, so renaming it in the admin breaks nothing.
+const ENDPOINT = BASE ? `${BASE}/api/collections/pbc_3943143483/records` : '';
 
 const PUSH_DELAY_MS = 800;
 
@@ -56,8 +61,8 @@ export function setDecision(adId, partial) {
 
 /**
  * Resets every decision to pending (used by the "reset" action). Written as
- * new, stamped decisions rather than a delete, so the reset also wins in the
- * sheet. Returns the resulting map.
+ * new, stamped decisions rather than a delete, so the reset also wins on the
+ * server. Returns the resulting map.
  */
 export function clearDecisions() {
   const all = readAll();
@@ -71,10 +76,10 @@ export function clearDecisions() {
   return all;
 }
 
-/* ── Sync with the sheet ── */
+/* ── Sync with PocketBase ── */
 
-const dirty = new Set(); // adIds changed locally and not yet confirmed by the sheet
-let adMeta = {}; // adId -> ad, for the readable columns in the sheet
+const dirty = new Set(); // adIds changed locally and not yet confirmed by the server
+let adMeta = {}; // adId -> ad, for the readable columns in the database
 let pushTimer;
 let syncStatus = ENDPOINT ? 'saved' : 'local'; // local | saving | saved | offline
 const listeners = new Set();
@@ -99,32 +104,55 @@ function schedulePush(adId) {
   pushTimer = setTimeout(flush, PUSH_DELAY_MS);
 }
 
+// PocketBase record ids are 15 characters of a-z0-9. Deriving the id from the
+// ad id makes a save a plain "update, or create when it is not there yet".
+function recordId(adId) {
+  let h1 = 0xdeadbeef;
+  let h2 = 0x41c6ce57;
+  for (const char of adId) {
+    h1 = Math.imul(h1 ^ char.charCodeAt(0), 2654435761);
+    h2 = Math.imul(h2 ^ char.charCodeAt(0), 1597334677);
+  }
+  const part = (n) => (n >>> 0).toString(36).padStart(7, '0');
+  return `r${part(h1)}${part(h2)}`;
+}
+
+async function save(adId, decision) {
+  const record = {
+    klant: client.slug,
+    item_id: adId,
+    soort: adMeta[adId]?.format || '',
+    naam: adMeta[adId]?.name || '',
+    status: decision.status,
+    opmerking: decision.comment,
+    bijgewerkt: decision.updatedAt,
+  };
+  const options = (method, body) => ({
+    method,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+    keepalive: true,
+  });
+  let res = await fetch(`${ENDPOINT}/${recordId(adId)}`, options('PATCH', record));
+  if (res.status === 404) res = await fetch(ENDPOINT, options('POST', { id: recordId(adId), ...record }));
+  if (!res.ok) throw new Error(`save failed (${res.status})`);
+}
+
 /** Pushes all unconfirmed decisions. Failures stay queued for the next attempt. */
 async function flush() {
   clearTimeout(pushTimer);
   if (!ENDPOINT || dirty.size === 0) return;
 
-  const ids = [...dirty];
   const all = readAll();
-  const decisions = ids
-    .filter((id) => all[id])
-    .map((id) => ({ id, name: adMeta[id]?.name, brand: adMeta[id]?.brand, ...all[id] }));
+  const sending = [...dirty].filter((id) => all[id]).map((id) => ({ id, decision: all[id] }));
 
   setSyncStatus('saving');
   try {
-    // text/plain keeps this a "simple" request: Apps Script can't answer a CORS preflight.
-    const res = await fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({ decisions }),
-      keepalive: true,
-    });
-    const body = await res.json();
-    if (!body.ok) throw new Error(body.error || 'push rejected');
+    await Promise.all(sending.map(({ id, decision }) => save(id, decision)));
     // Only confirm what was sent unchanged; edits made meanwhile stay queued.
     const now = readAll();
-    for (const sent of decisions) {
-      if (now[sent.id]?.updatedAt === sent.updatedAt) dirty.delete(sent.id);
+    for (const { id, decision } of sending) {
+      if (now[id]?.updatedAt === decision.updatedAt) dirty.delete(id);
     }
     if (dirty.size === 0) setSyncStatus('saved');
     else pushTimer = setTimeout(flush, PUSH_DELAY_MS);
@@ -134,18 +162,26 @@ async function flush() {
 }
 
 /**
- * Merges local and sheet decisions (newest wins per ad), pushes whatever the
- * sheet is missing, and returns the merged map. Local decisions for ads that
+ * Merges local and server decisions (newest wins per ad), pushes whatever the
+ * server is missing, and returns the merged map. Local decisions for ads that
  * are no longer in the manifest are left alone and not uploaded.
  */
 export async function syncWithRemote(ads) {
   adMeta = Object.fromEntries(ads.map((ad) => [ad.id, ad]));
   if (!ENDPOINT) return readAll();
 
-  let remote;
+  const remote = {};
   try {
-    const res = await fetch(ENDPOINT);
-    remote = (await res.json()).decisions || {};
+    const filter = encodeURIComponent(`klant="${client.slug}"`);
+    const res = await fetch(`${ENDPOINT}?perPage=500&skipTotal=1&filter=${filter}`);
+    if (!res.ok) throw new Error(`load failed (${res.status})`);
+    for (const record of (await res.json()).items) {
+      remote[record.item_id] = {
+        status: record.status,
+        comment: record.opmerking,
+        updatedAt: record.bijgewerkt,
+      };
+    }
   } catch {
     setSyncStatus('offline');
     return readAll();

@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import AdCard from './components/AdCard';
 import SummaryBar from './components/SummaryBar';
+import CopyOverview from './components/CopyOverview';
 import { loadAds, client } from './lib/ads';
 import {
   getAllDecisions,
@@ -16,25 +17,32 @@ import './App.css';
 export default function App() {
   const [ads, setAds] = useState([]);
   const [clientName, setClientName] = useState('');
+  const [copy, setCopy] = useState(null);
+  const [copyGroups, setCopyGroups] = useState([]);
+  // Which copy variant the ads show as example, per kind.
+  const [variant, setVariant] = useState({ primary: 0, headline: 0 });
   const [decisions, setDecisions] = useState({});
   const [status, setStatus] = useState('loading'); // loading | ready | error
   const [error, setError] = useState('');
   const [filter, setFilter] = useState('all');
   const [syncStatus, setSyncStatus] = useState('local');
+  const gridRef = useRef(null);
 
   useEffect(() => onSyncStatus(setSyncStatus), []);
 
   useEffect(() => {
     let cancelled = false;
     loadAds()
-      .then(({ ads: list, clientName: name }) => {
+      .then(({ ads: list, clientName: name, copy: clientCopy, copyGroups: groups }) => {
         if (cancelled) return;
         setAds(list);
         setClientName(name);
+        setCopy(clientCopy);
+        setCopyGroups(groups);
         setDecisions(getAllDecisions());
         setStatus('ready');
-        // Show local decisions right away, then merge in what the sheet has.
-        return syncWithRemote(list).then((merged) => {
+        // Show local decisions right away, then merge in what the server has.
+        return syncWithRemote([...list, ...groups.flatMap((g) => g.items)]).then((merged) => {
           if (!cancelled) setDecisions(merged);
         });
       })
@@ -64,17 +72,33 @@ export default function App() {
   };
 
   const handleExport = () => {
-    downloadCsv(`meta-ad-goedkeuring-${client.slug}.csv`, buildCsv(ads, decisions));
+    downloadCsv(`meta-ad-goedkeuring-${client.slug}.csv`, buildCsv(reviewItems, decisions));
   };
 
+  // Everything the client decides on: the ads and the separate copy lines.
+  const reviewItems = useMemo(
+    () => [...ads, ...copyGroups.flatMap((group) => group.items)],
+    [ads, copyGroups]
+  );
+
   const counts = useMemo(() => {
-    const c = { total: ads.length, approved: 0, rejected: 0, pending: 0 };
-    for (const ad of ads) {
-      const s = decisions[ad.id]?.status || 'pending';
+    const c = { total: reviewItems.length, approved: 0, rejected: 0, pending: 0 };
+    for (const item of reviewItems) {
+      const s = decisions[item.id]?.status || 'pending';
       c[s] += 1;
     }
     return c;
-  }, [ads, decisions]);
+  }, [reviewItems, decisions]);
+
+  const groupOf = (kind) => copyGroups.find((group) => group.kind === kind)?.items || [];
+  const primaryTexts = groupOf('primary');
+  const headlines = groupOf('headline');
+  // The texts are picked at the bottom of the page: scroll back up so the
+  // client sees the ads change.
+  const selectVariant = (kind) => (index) => {
+    setVariant((prev) => ({ ...prev, [kind]: index }));
+    gridRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const visibleAds = useMemo(() => {
     if (filter === 'all') return ads;
@@ -113,11 +137,14 @@ export default function App() {
             onExport={handleExport}
             onReset={handleReset}
           />
-          <main className="ad-grid">
+          <main className="ad-grid" ref={gridRef}>
             {visibleAds.map((ad) => (
               <AdCard
                 key={ad.id}
                 ad={ad}
+                copy={copy}
+                primaryText={primaryTexts[variant.primary]?.name}
+                headline={headlines[variant.headline]?.name}
                 decision={decisions[ad.id] || EMPTY_DECISION}
                 onSetStatus={handleSetStatus}
                 onSetComment={handleSetComment}
@@ -126,6 +153,19 @@ export default function App() {
           </main>
           {visibleAds.length === 0 && (
             <p className="state-msg">Geen advertenties in dit filter.</p>
+          )}
+          {copyGroups.length > 0 && (
+            <CopyOverview
+              groups={copyGroups.map((group) => ({
+                ...group,
+                selected: variant[group.kind],
+                onSelect: group.kind in variant ? selectVariant(group.kind) : undefined,
+              }))}
+              decisions={decisions}
+              emptyDecision={EMPTY_DECISION}
+              onSetStatus={handleSetStatus}
+              onSetComment={handleSetComment}
+            />
           )}
         </>
       )}

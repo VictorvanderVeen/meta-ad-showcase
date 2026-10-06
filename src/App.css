@@ -127,8 +127,11 @@ code {
 
 /* ── Ad grid ── */
 .ad-grid {
+  /* stay clear of the sticky summary bar when scrolled to */
+  scroll-margin-top: 140px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  align-items: start;
   gap: 20px;
 }
 
@@ -244,4 +247,203 @@ code {
 .ad-card-comment:focus {
   outline: none;
   border-color: #1a1a1a;
+}
+
+/* ── Facebook feed ad ── */
+.feed-ad {
+  width: 100%;
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #050505;
+}
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  /* room for the status pill in the top right corner */
+  padding-right: 136px;
+}
+
+.feed-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.feed-header-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.feed-page-name {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feed-sponsored {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.feed-header-dots {
+  display: none;
+}
+
+.feed-primary-text {
+  margin: 0;
+  padding: 0 12px 12px;
+  font-size: 14px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
+.feed-more {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #65676b;
+  cursor: pointer;
+}
+
+.feed-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f0f2f5;
+}
+
+.feed-link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.feed-link-domain {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #65676b;
+}
+
+.feed-link-headline {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.feed-link-description {
+  font-size: 13px;
+  color: #65676b;
+}
+
+.feed-cta-btn {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  background: #e4e6eb;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.feed-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  font-weight: 600;
+  color: #65676b;
+}
+
+/* ── Copy overview ── */
+.copy-overview {
+  margin-top: 48px;
+}
+
+.copy-overview h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.copy-group h3 {
+  margin: 28px 0 10px;
+  font-size: 16px;
+}
+
+.copy-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+  padding: 16px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+}
+.copy-row.status-approved { border-color: #34c759; }
+.copy-row.status-rejected { border-color: #ff3b30; }
+
+.copy-row-text {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px 6px;
+  align-content: start;
+}
+
+.copy-row-number {
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.copy-row-text p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.copy-show-btn {
+  grid-column: 2;
+  justify-self: start;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 13px;
+  color: #1a1a1a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.copy-show-btn:disabled {
+  color: #6b7280;
+  text-decoration: none;
+  cursor: default;
+}
+
+.copy-row-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .copy-row {
+    grid-template-columns: 1fr;
+  }
 }

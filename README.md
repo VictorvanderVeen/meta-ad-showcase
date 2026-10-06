@@ -7,8 +7,8 @@ beslissingen zijn exporteerbaar als CSV.
 
 ## Stack
 React + Vite. Beslissingen gaan via een opslag-abstractie (`src/lib/storage.js`) eerst
-naar `localStorage` en daarna naar een Google Sheet (Apps Script-webapp in
-`apps-script/`). Bij het laden worden beide kanten per advertentie samengevoegd: de
+naar `localStorage` en daarna naar PocketBase op `db.vdveen.online` (collectie
+`adshowcase_beoordelingen`). Bij het laden worden beide kanten per advertentie samengevoegd: de
 nieuwste `updatedAt` wint.
 
 ## Ontwikkelen
@@ -59,24 +59,22 @@ build krijgt elke klantmap een eigen `index.html`; een nieuwe klantmap werkt in
 `npm run dev` meteen.
 
 ## Beslissingen ophalen
-Beslissingen komen binnen in de Google Sheet **Meta Ad Showcase - beoordelingen**:
-
-- **Beoordelingen**: één rij per advertentie, altijd de laatste stand.
-- **Log**: elke wijziging, wordt nooit overschreven.
+Beslissingen komen binnen in PocketBase, collectie **adshowcase_beoordelingen** op
+`db.vdveen.online`: één regel per advertentie of tekst, altijd de laatste stand. De
+kolom `klant` is de klantmap-naam.
 
 Iedereen met de link ziet en wijzigt dezelfde beoordelingen. De knop **Exporteer CSV**
 blijft werken als reservekopie (kolommen: id, name, format, brand, status, comment,
 updatedAt).
 
 ### Nieuwe ronde
-De Sheet koppelt op `id`. Gebruik voor een nieuwe ronde nieuwe id's in `ads.json`;
-oude rijen blijven dan staan zonder de nieuwe ronde te beïnvloeden.
+De database koppelt op `id`. Gebruik voor een nieuwe ronde nieuwe id's in `ads.json`;
+oude regels blijven dan staan zonder de nieuwe ronde te beïnvloeden.
 
-### Apps Script aanpassen
+### Collectie opnieuw aanmaken
 ```bash
-cd apps-script
-clasp push
-clasp deploy --deploymentId <id uit .env-URL> --description "..."   # zelfde URL houden
+node --env-file=../me-timer/.env.migratie.local scripts/pocketbase-setup.mjs
 ```
-De webapp-URL staat in `.env` (`VITE_SHEET_ENDPOINT`). Die is niet geheim; leeg laten
-betekent alleen lokaal opslaan.
+Het serveradres staat in `.env` (`VITE_POCKETBASE_URL`). Dat is niet geheim; leeg laten
+betekent alleen lokaal opslaan. De map `apps-script/` is de oude Google Sheet-koppeling
+en wordt niet meer gebruikt.

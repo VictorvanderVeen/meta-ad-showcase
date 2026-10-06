@@ -5,7 +5,13 @@
  *
  *   public/ads/<klant>/ads.json   →   …/meta-ad-showcase/<klant>/
  *
- *   { "client": "Naam", "ads": [ { "id", "file", "name", "format", "brand" }, ... ] }
+ *   { "client": "Naam", "ads": [ { "id", "file", "name", "format", "brand" }, ... ], "copy": { ... } }
+ *
+ * `copy` is optional: the Meta copy that runs with the images. With it, every
+ * ad is shown as a Facebook feed ad and the texts get their own decisions.
+ *
+ *   { "pageName", "color", "domain", "cta",
+ *     "primaryTexts": [], "headlines": [], "descriptions": [] }
  *
  * `file` is relative to the client folder. `id` must be stable — decisions are
  * keyed on it — and unique across clients (prefix it with the client slug).
@@ -42,7 +48,31 @@ export async function loadAds() {
   if (!res.ok) throw new Error(`Kon ads.json niet laden (${res.status})`);
   const data = await res.json();
   const ads = Array.isArray(data.ads) ? data.ads : [];
-  return { ads, clientName: data.client || ads[0]?.brand || '' };
+  const clientName = data.client || ads[0]?.brand || '';
+  return { ads, clientName, copy: data.copy || null, copyGroups: copyGroups(data.copy, clientName) };
+}
+
+const COPY_KINDS = [
+  { kind: 'primary', field: 'primaryTexts', title: 'Primaire tekst (boven het beeld)' },
+  { kind: 'headline', field: 'headlines', title: 'Kop (onder het beeld)' },
+  { kind: 'description', field: 'descriptions', title: 'Beschrijving (onder de kop)' },
+];
+
+// Copy lines are shaped like ads ({ id, name, format, brand }) so decisions,
+// server sync and the CSV export treat them the same. The id holds the
+// position: reordering the texts in ads.json moves their decisions along.
+function copyGroups(copy, clientName) {
+  if (!copy) return [];
+  return COPY_KINDS.map(({ kind, field, title }) => ({
+    kind,
+    title,
+    items: (copy[field] || []).map((text, index) => ({
+      id: `${client.slug}-copy-${kind}-${index + 1}`,
+      name: text,
+      format: title,
+      brand: clientName,
+    })),
+  })).filter((group) => group.items.length > 0);
 }
 
 /** Path to an ad image of the current client. */

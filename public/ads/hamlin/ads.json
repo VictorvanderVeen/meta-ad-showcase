@@ -64,5 +64,30 @@
       "format": "1:1",
       "brand": "Hamlin Fistula Nederland"
     }
-  ]
+  ],
+  "copy": {
+    "pageName": "Hamlin Fistula Nederland",
+    "color": "#00686F",
+    "domain": "",
+    "cta": "Nu doneren",
+    "primaryTexts": [
+      "17 jaar lang hield Genet zich verborgen. Nu is ze geholpen. Geef de volgende vrouw een verzorgingspakket voor €40.",
+      "Gewond geraakt bij haar bevalling. Jarenlang alleen. Met €40 geef jij een vrouw zoals Genet een verzorgingspakket.",
+      "Elke vrouw die bij een Hamlin-ziekenhuis aankomt, begint met een verzorgingspakket. Voor €40 geef jij er één.",
+      "Een deken. Een schoon nachthemd. Een jurk voor de dag dat ze naar huis gaat. Geef één vrouw dit pakket voor €40.",
+      "Eén bevalling veranderde Genets leven. Eén pakket van €40 is voor een vrouw zoals zij de eerste stap naar herstel.",
+      "17 jaar lang hield Genet zich verborgen voor de wereld.\n\nBij haar bevalling raakte ze ernstig gewond. Ze kreeg een fistel en werd incontinent. Uit schaamte trok ze zich terug.\n\nTot ze aankwam bij het ziekenhuis van Hamlin Fistula Ethiopia in Addis Abeba. Daar kreeg ze eerst een verzorgingspakket: een deken, een schoon nachthemd, slippers. En een nieuwe jurk, voor de dag dat ze naar huis gaat. ❤\n\nElke vrouw die aankomt, begint zo. Het volgende pakket kan van jou komen.\n\nMet €40 geef jij één vrouw een verzorgingspakket.",
+      "Eén bevalling veranderde alles.\n\nGenet raakte ernstig gewond bij haar bevalling. Jarenlang leefde ze in schaamte en isolement. Tot ze hulp vond in het ziekenhuis van Hamlin Fistula Ethiopia in Addis Abeba.\n\nZe is niet de enige. Elke vrouw die bij een van de zes Hamlin-ziekenhuizen aankomt, begint met een verzorgingspakket: een deken, schone nachtkleding en een jurk voor de thuisreis.\n\nMet €40 geef jij één vrouw dat pakket. Een eerste, concrete stap naar herstel en waardigheid."
+    ],
+    "headlines": [
+      "Geef één vrouw een verzorgingspakket",
+      "€40: een eerste stap naar herstel",
+      "Eén bevalling veranderde alles",
+      "Een deken, een nachthemd, een jurk",
+      "Jouw €40 = verzorgingspakket voor haar"
+    ],
+    "descriptions": [
+      "Doneer een pakket van €40"
+    ]
+  }
 }
