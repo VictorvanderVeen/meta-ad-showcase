@@ -45,6 +45,46 @@ code {
   font-size: 13px;
 }
 
+/* ── Campaign archive ── */
+.campaign-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 480px;
+}
+
+.campaign-list-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid #e3e5e8;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.campaign-list-link:hover {
+  border-color: #b7bcc3;
+  background: #f7f8f9;
+}
+
+.campaign-list-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.campaign-list-date {
+  color: #6b7280;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 /* ── Summary bar ── */
 .summary-bar {
   position: sticky;

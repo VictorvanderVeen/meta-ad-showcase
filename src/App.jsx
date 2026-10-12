@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import AdCard from './components/AdCard';
 import SummaryBar from './components/SummaryBar';
 import CopyOverview from './components/CopyOverview';
+import CampaignList from './components/CampaignList';
 import { loadAds, client } from './lib/ads';
 import {
   getAllDecisions,
@@ -22,7 +23,8 @@ export default function App() {
   // Which copy variant the ads show as example, per kind.
   const [variant, setVariant] = useState({ primary: 0, headline: 0 });
   const [decisions, setDecisions] = useState({});
-  const [status, setStatus] = useState('loading'); // loading | ready | error
+  const [status, setStatus] = useState('loading'); // loading | ready | campaigns | error
+  const [campaigns, setCampaigns] = useState([]);
   const [error, setError] = useState('');
   const [filter, setFilter] = useState('all');
   const [syncStatus, setSyncStatus] = useState('local');
@@ -33,8 +35,15 @@ export default function App() {
   useEffect(() => {
     let cancelled = false;
     loadAds()
-      .then(({ ads: list, clientName: name, copy: clientCopy, copyGroups: groups }) => {
+      .then((result) => {
         if (cancelled) return;
+        if (result.kind === 'campaigns') {
+          setClientName(result.clientName);
+          setCampaigns(result.campaigns);
+          setStatus('campaigns');
+          return;
+        }
+        const { ads: list, clientName: name, copy: clientCopy, copyGroups: groups } = result;
         setAds(list);
         setClientName(name);
         setCopy(clientCopy);
@@ -72,7 +81,8 @@ export default function App() {
   };
 
   const handleExport = () => {
-    downloadCsv(`meta-ad-goedkeuring-${client.slug}.csv`, buildCsv(reviewItems, decisions));
+    const scope = client.campaign ? `${client.slug}-${client.campaign}` : client.slug;
+    downloadCsv(`meta-ad-goedkeuring-${scope}.csv`, buildCsv(reviewItems, decisions));
   };
 
   // Everything the client decides on: the ads and the separate copy lines.
@@ -109,7 +119,11 @@ export default function App() {
     <div className="app">
       <header className="app-header">
         <h1>Meta Ad Showcase{clientName ? ` — ${clientName}` : ''}</h1>
-        <p className="app-subtitle">Beoordeel en keur de advertenties goed of af.</p>
+        <p className="app-subtitle">
+          {status === 'campaigns'
+            ? 'Kies een campagne.'
+            : 'Beoordeel en keur de advertenties goed of af.'}
+        </p>
       </header>
 
       {status === 'loading' && <p className="state-msg">Advertenties laden…</p>}
@@ -118,13 +132,19 @@ export default function App() {
         <div className="state-msg state-error">
           <p>Kon de advertenties niet laden: {error}</p>
           <p className="state-hint">
-            Zorg dat <code>public/ads/{client.slug}/ads.json</code> bestaat en naar bestaande PNG&apos;s verwijst.
+            Zorg dat <code>public/ads/{client.slug}/{client.campaign ? `${client.campaign}/` : ''}ads.json</code> bestaat
+            en naar bestaande PNG&apos;s verwijst.
           </p>
         </div>
       )}
 
+      {status === 'campaigns' && <CampaignList campaigns={campaigns} />}
+
       {status === 'ready' && ads.length === 0 && (
-        <p className="state-msg">Nog geen advertenties. Voeg PNG&apos;s toe in <code>public/ads/{client.slug}/</code>.</p>
+        <p className="state-msg">
+          Nog geen advertenties. Voeg PNG&apos;s toe in{' '}
+          <code>public/ads/{client.slug}/{client.campaign ? `${client.campaign}/` : ''}</code>.
+        </p>
       )}
 
       {status === 'ready' && ads.length > 0 && (
