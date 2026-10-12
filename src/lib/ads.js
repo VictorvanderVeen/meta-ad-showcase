@@ -38,21 +38,38 @@ function resolveClient() {
   const segments = window.location.pathname.split('/').filter(Boolean);
   if (segments.at(-1) === 'index.html') segments.pop();
 
+  // A built page (vite.config.js's clientPages()) states exactly which
+  // client/campaign it is for, because a GitHub Pages project site is
+  // itself served from a path segment (…/meta-ad-showcase/<klant>/…) — the
+  // app can't tell that prefix apart from its own routing just by counting
+  // segments at runtime, "meta-ad-showcase" is as valid a slug as "hamlin"
+  // is. The dev server has no such prefix, so it keeps guessing from the URL.
+  const link = window.__SHOWCASE_LINK__;
   let slug = DEFAULT_CLIENT;
   let campaign = null;
+  let consumed = 0;
 
-  // A client/campaign link has two slug-shaped segments at the end; a
-  // client-only link (single campaign, or an archive's own index) has one.
-  if (segments.length >= 2 && SLUG_RE.test(segments.at(-2)) && SLUG_RE.test(segments.at(-1))) {
-    campaign = segments.pop();
-    slug = segments.pop();
-  } else if (SLUG_RE.test(segments.at(-1))) {
-    slug = segments.pop();
+  if (link) {
+    slug = link.slug;
+    campaign = link.campaign || null;
+    consumed = link.consumed;
+  } else if (import.meta.env.DEV) {
+    // A client/campaign link has two slug-shaped segments at the end; a
+    // client-only link (single campaign, or an archive's own index) has one.
+    if (segments.length >= 2 && SLUG_RE.test(segments.at(-2)) && SLUG_RE.test(segments.at(-1))) {
+      campaign = segments.at(-1);
+      slug = segments.at(-2);
+      consumed = 2;
+    } else if (SLUG_RE.test(segments.at(-1))) {
+      slug = segments.at(-1);
+      consumed = 1;
+    }
   }
 
   // Absolute path of the app root, so ad files resolve the same with or
   // without the client/campaign segments (and with or without a trailing slash).
-  const root = segments.length ? `/${segments.join('/')}/` : '/';
+  const rootSegments = consumed ? segments.slice(0, segments.length - consumed) : segments;
+  const root = rootSegments.length ? `/${rootSegments.join('/')}/` : '/';
   return { slug, campaign, root };
 }
 
