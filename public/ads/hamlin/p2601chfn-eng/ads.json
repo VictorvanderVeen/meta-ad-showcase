@@ -1,0 +1,91 @@
+{
+  "client": "Hamlin Fistula Nederland",
+  "ads": [
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_01_genet_hidden-feed-square",
+      "file": "P2601CHFN_01_genet_hidden-feed-square.jpg",
+      "name": "17 years hidden from the world",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_02_genet_birth-feed-square",
+      "file": "P2601CHFN_02_genet_birth-feed-square.jpg",
+      "name": "One birth changed everything",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_03_genet_notalone-feed-square",
+      "file": "P2601CHFN_03_genet_notalone-feed-square.jpg",
+      "name": "Genet is no longer alone",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_04_package_amount-feed-square",
+      "file": "P2601CHFN_04_package_amount-feed-square.jpg",
+      "name": "1 care package: €40",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_05_package_contents-feed-square",
+      "file": "P2601CHFN_05_package_contents-feed-square.jpg",
+      "name": "A blanket. A nightgown. A dress.",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_06_package_firststep-feed-square",
+      "file": "P2601CHFN_06_package_firststep-feed-square.jpg",
+      "name": "The first step to recovery",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_07_donor_next-feed-square",
+      "file": "P2601CHFN_07_donor_next-feed-square.jpg",
+      "name": "The next woman gets it from you",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_08_donor_dress-feed-square",
+      "file": "P2601CHFN_08_donor_dress-feed-square.jpg",
+      "name": "A dress for the day she goes home",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    },
+    {
+      "id": "hamlin-p2601chfn-eng-p2601chfn_09_donor_question-feed-square",
+      "file": "P2601CHFN_09_donor_question-feed-square.jpg",
+      "name": "What does €40 do in Ethiopia?",
+      "format": "1:1",
+      "brand": "Hamlin Fistula Nederland"
+    }
+  ],
+  "copy": {
+    "pageName": "Hamlin Fistula Nederland",
+    "color": "#00686F",
+    "domain": "",
+    "cta": "Nu doneren",
+    "primaryTexts": [
+      "For 17 years, Genet hid herself. Now she's been helped. Give the next woman a care package for €40.",
+      "Injured during childbirth. Alone for years. With €40, you give a woman like Genet a care package.",
+      "Every woman who arrives at a Hamlin hospital starts with a care package. For €40, you give one.",
+      "A blanket. A clean nightgown. A dress for the day she goes home. Give one woman this package for €40.",
+      "One childbirth changed Genet's life. One €40 package is, for a woman like her, the first step to recovery."
+    ],
+    "headlines": [
+      "Give one woman a care package",
+      "€40: a first step to recovery",
+      "One birth changed everything",
+      "A blanket, a nightgown, a dress",
+      "Your €40 = a care package for her"
+    ],
+    "descriptions": [
+      "Donate a €40 package"
+    ]
+  }
+}
