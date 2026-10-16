@@ -3,12 +3,12 @@
   "campaigns": [
     {
       "slug": "p2601chfn",
-      "name": "P2601CHFN (NL)",
-      "updatedAt": "2026-10-06T00:00:00.000Z"
+      "name": "P2601CHFN (NL) — revisie 16-10",
+      "updatedAt": "2026-10-16T14:00:00.000Z"
     },
     {
       "slug": "p2601chfn-en",
-      "name": "P2601CHFN (EN)",
+      "name": "P2601CHFN (EN) — oude versie",
       "updatedAt": "2026-10-12T00:00:00.000Z"
     },
     {
@@ -18,8 +18,8 @@
     },
     {
       "slug": "p2601chfn-eng",
-      "name": "p2601chfn_eng",
-      "updatedAt": "2026-10-13T07:37:21.709Z"
+      "name": "P2601CHFN (EN) — revisie 16-10",
+      "updatedAt": "2026-10-16T14:00:00.000Z"
     }
   ]
 }
