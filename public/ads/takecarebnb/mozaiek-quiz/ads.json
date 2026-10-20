@@ -1,0 +1,173 @@
+{
+  "client": "Takecarebnb",
+  "ads": [
+    {
+      "id": "takecarebnb-mozaiek-quiz-1-plek-in-huis",
+      "file": "mozaiek-1-plek-in-huis.jpg",
+      "name": "Anneke — plek in huis (4:5)",
+      "format": "4:5",
+      "brand": "Takecarebnb",
+      "primaryText": "Het huis van Anneke is te groot voor twee. Ze leren van hun gasten, en hun gasten van hen. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-1-plek-in-huis-staand-9x16",
+      "file": "mozaiek-1-plek-in-huis-staand-9x16.jpg",
+      "name": "Anneke — plek in huis (9:16)",
+      "format": "9:16",
+      "brand": "Takecarebnb",
+      "primaryText": "Het huis van Anneke is te groot voor twee. Ze leren van hun gasten, en hun gasten van hen. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-1-plek-in-huis-liggend-1.91x1",
+      "file": "mozaiek-1-plek-in-huis-liggend-1.91x1.jpg",
+      "name": "Anneke — plek in huis (1.91:1)",
+      "format": "1.91:1",
+      "brand": "Takecarebnb",
+      "primaryText": "Het huis van Anneke is te groot voor twee. Ze leren van hun gasten, en hun gasten van hen. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-2-groot-huis",
+      "file": "mozaiek-2-groot-huis.jpg",
+      "name": "Ton — groot huis (4:5)",
+      "format": "4:5",
+      "brand": "Takecarebnb",
+      "primaryText": "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Hij twijfelde: zou het klikken? Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-2-groot-huis-staand-9x16",
+      "file": "mozaiek-2-groot-huis-staand-9x16.jpg",
+      "name": "Ton — groot huis (9:16)",
+      "format": "9:16",
+      "brand": "Takecarebnb",
+      "primaryText": "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Hij twijfelde: zou het klikken? Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-2-groot-huis-liggend-1.91x1",
+      "file": "mozaiek-2-groot-huis-liggend-1.91x1.jpg",
+      "name": "Ton — groot huis (1.91:1)",
+      "format": "1.91:1",
+      "brand": "Takecarebnb",
+      "primaryText": "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Hij twijfelde: zou het klikken? Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-3-stond-leeg",
+      "file": "mozaiek-3-stond-leeg.jpg",
+      "name": "Renata — stond leeg (4:5)",
+      "format": "4:5",
+      "brand": "Takecarebnb",
+      "primaryText": "Het appartement van Renata stond vaak leeg. Haar gasten vonden later werk en trouwden. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-3-stond-leeg-staand-9x16",
+      "file": "mozaiek-3-stond-leeg-staand-9x16.jpg",
+      "name": "Renata — stond leeg (9:16)",
+      "format": "9:16",
+      "brand": "Takecarebnb",
+      "primaryText": "Het appartement van Renata stond vaak leeg. Haar gasten vonden later werk en trouwden. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-3-stond-leeg-liggend-1.91x1",
+      "file": "mozaiek-3-stond-leeg-liggend-1.91x1.jpg",
+      "name": "Renata — stond leeg (1.91:1)",
+      "format": "1.91:1",
+      "brand": "Takecarebnb",
+      "primaryText": "Het appartement van Renata stond vaak leeg. Haar gasten vonden later werk en trouwden. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-4-na-een-week",
+      "file": "mozaiek-4-na-een-week.jpg",
+      "name": "Ariane — na een week (4:5)",
+      "format": "4:5",
+      "brand": "Takecarebnb",
+      "primaryText": "Ariane twijfelde over haar privacy. Wat ze ontdekte: haar gast wilde óók privacy. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-4-na-een-week-staand-9x16",
+      "file": "mozaiek-4-na-een-week-staand-9x16.jpg",
+      "name": "Ariane — na een week (9:16)",
+      "format": "9:16",
+      "brand": "Takecarebnb",
+      "primaryText": "Ariane twijfelde over haar privacy. Wat ze ontdekte: haar gast wilde óók privacy. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-4-na-een-week-liggend-1.91x1",
+      "file": "mozaiek-4-na-een-week-liggend-1.91x1.jpg",
+      "name": "Ariane — na een week (1.91:1)",
+      "format": "1.91:1",
+      "brand": "Takecarebnb",
+      "primaryText": "Ariane twijfelde over haar privacy. Wat ze ontdekte: haar gast wilde óók privacy. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-5-roosjes",
+      "file": "mozaiek-5-roosjes.jpg",
+      "name": "Leen — roosjes (4:5)",
+      "format": "4:5",
+      "brand": "Takecarebnb",
+      "primaryText": "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-5-roosjes-staand-9x16",
+      "file": "mozaiek-5-roosjes-staand-9x16.jpg",
+      "name": "Leen — roosjes (9:16)",
+      "format": "9:16",
+      "brand": "Takecarebnb",
+      "primaryText": "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-5-roosjes-liggend-1.91x1",
+      "file": "mozaiek-5-roosjes-liggend-1.91x1.jpg",
+      "name": "Leen — roosjes (1.91:1)",
+      "format": "1.91:1",
+      "brand": "Takecarebnb",
+      "primaryText": "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-6-eet-t",
+      "file": "mozaiek-6-eet-t.jpg",
+      "name": "Ilze — eet ’t (4:5)",
+      "format": "4:5",
+      "brand": "Takecarebnb",
+      "primaryText": "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-6-eet-t-staand-9x16",
+      "file": "mozaiek-6-eet-t-staand-9x16.jpg",
+      "name": "Ilze — eet ’t (9:16)",
+      "format": "9:16",
+      "brand": "Takecarebnb",
+      "primaryText": "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Wat voor gastgezin ben jij?"
+    },
+    {
+      "id": "takecarebnb-mozaiek-quiz-6-eet-t-liggend-1.91x1",
+      "file": "mozaiek-6-eet-t-liggend-1.91x1.jpg",
+      "name": "Ilze — eet ’t (1.91:1)",
+      "format": "1.91:1",
+      "brand": "Takecarebnb",
+      "primaryText": "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Wat voor gastgezin ben jij?"
+    }
+  ],
+  "copy": {
+    "pageName": "Takecarebnb",
+    "color": "#004542",
+    "domain": "takecarebnb.org",
+    "cta": "Meer informatie",
+    "primaryTexts": [
+      "Het huis van Anneke is te groot voor twee. Ze leren van hun gasten, en hun gasten van hen. Wat voor gastgezin ben jij?",
+      "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Hij twijfelde: zou het klikken? Wat voor gastgezin ben jij?",
+      "Het appartement van Renata stond vaak leeg. Haar gasten vonden later werk en trouwden. Wat voor gastgezin ben jij?",
+      "Ariane twijfelde over haar privacy. Wat ze ontdekte: haar gast wilde óók privacy. Wat voor gastgezin ben jij?",
+      "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Wat voor gastgezin ben jij?",
+      "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Wat voor gastgezin ben jij?"
+    ],
+    "headlines": [
+      "Wat voor gastgezin ben jij?",
+      "Doe de quiz: 8 korte vragen",
+      "Keukentafel, Wegwijzer of Rustige Haven?",
+      "Ontdek welk gastgezin bij je past",
+      "Ruimte over in huis? Doe de quiz"
+    ],
+    "descriptions": [
+      "8 vragen, meteen uitslag"
+    ]
+  }
+}

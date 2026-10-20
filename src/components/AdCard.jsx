@@ -20,7 +20,7 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
             alt={ad.name}
             copy={copy}
             pageName={copy.pageName || ad.brand}
-            primaryText={primaryText}
+            primaryText={ad.primaryText || primaryText}
             headline={headline}
           />
         ) : (

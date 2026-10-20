@@ -6,6 +6,7 @@
  *   public/ads/<klant>/<campagne>/ads.json   →  …/meta-ad-showcase/<klant>/<campagne>/
  *
  *   ads.json:        { "client": "Naam", "ads": [ { "id", "file", "name", "format", "brand" }, ... ], "copy": {...} }
+ *                    An ad may carry its own "primaryText": that ad then always shows it in its Facebook card.
  *   campaigns.json:  { "client": "Naam", "campaigns": [ { "slug", "name", "updatedAt" }, ... ] }
  *
  * A client is either a single campaign (ads.json directly in its folder —
