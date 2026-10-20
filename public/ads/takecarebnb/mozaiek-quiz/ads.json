@@ -7,7 +7,7 @@
       "name": "Anneke — plek in huis (4:5)",
       "format": "4:5",
       "brand": "Takecarebnb",
-      "primaryText": "Het huis van Anneke is te groot voor twee. Nu leren ze van hun gasten, en andersom. Ruimte en zin om te leren? Doe de quiz."
+      "primaryText": "Anneke had al vaker gasten in huis. “We leren van hen, en zij van ons.” Wat zou jij leren? Ontdek wat voor gastgezin je bent."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-1-plek-in-huis-staand-9x16",
@@ -15,7 +15,7 @@
       "name": "Anneke — plek in huis (9:16)",
       "format": "9:16",
       "brand": "Takecarebnb",
-      "primaryText": "Het huis van Anneke is te groot voor twee. Nu leren ze van hun gasten, en andersom. Ruimte en zin om te leren? Doe de quiz."
+      "primaryText": "Anneke had al vaker gasten in huis. “We leren van hen, en zij van ons.” Wat zou jij leren? Ontdek wat voor gastgezin je bent."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-1-plek-in-huis-liggend-1.91x1",
@@ -23,7 +23,7 @@
       "name": "Anneke — plek in huis (1.91:1)",
       "format": "1.91:1",
       "brand": "Takecarebnb",
-      "primaryText": "Het huis van Anneke is te groot voor twee. Nu leren ze van hun gasten, en andersom. Ruimte en zin om te leren? Doe de quiz."
+      "primaryText": "Anneke had al vaker gasten in huis. “We leren van hen, en zij van ons.” Wat zou jij leren? Ontdek wat voor gastgezin je bent."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-2-groot-huis",
@@ -31,7 +31,7 @@
       "name": "Ton — groot huis (4:5)",
       "format": "4:5",
       "brand": "Takecarebnb",
-      "primaryText": "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Heb jij ook kamers die leeg staan? Doe de quiz."
+      "primaryText": "Ton twijfelde: zou het klikken? “Nou, dat bleek prima te gaan.” Wat houdt jou tegen? Ontdek wat voor gastgezin je bent."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-2-groot-huis-staand-9x16",
@@ -39,7 +39,7 @@
       "name": "Ton — groot huis (9:16)",
       "format": "9:16",
       "brand": "Takecarebnb",
-      "primaryText": "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Heb jij ook kamers die leeg staan? Doe de quiz."
+      "primaryText": "Ton twijfelde: zou het klikken? “Nou, dat bleek prima te gaan.” Wat houdt jou tegen? Ontdek wat voor gastgezin je bent."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-2-groot-huis-liggend-1.91x1",
@@ -47,7 +47,7 @@
       "name": "Ton — groot huis (1.91:1)",
       "format": "1.91:1",
       "brand": "Takecarebnb",
-      "primaryText": "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Heb jij ook kamers die leeg staan? Doe de quiz."
+      "primaryText": "Ton twijfelde: zou het klikken? “Nou, dat bleek prima te gaan.” Wat houdt jou tegen? Ontdek wat voor gastgezin je bent."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-3-stond-leeg",
@@ -55,7 +55,7 @@
       "name": "Renata — stond leeg (4:5)",
       "format": "4:5",
       "brand": "Takecarebnb",
-      "primaryText": "Renata’s appartement stond vaak leeg. Haar gasten vonden later werk en trouwden. Staat er bij jou ook iets leeg? Doe de quiz."
+      "primaryText": "Renata’s gasten vonden werk en trouwden, nadat ze bij haar hadden gelogeerd. Wat kan jouw lege kamer betekenen? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-3-stond-leeg-staand-9x16",
@@ -63,7 +63,7 @@
       "name": "Renata — stond leeg (9:16)",
       "format": "9:16",
       "brand": "Takecarebnb",
-      "primaryText": "Renata’s appartement stond vaak leeg. Haar gasten vonden later werk en trouwden. Staat er bij jou ook iets leeg? Doe de quiz."
+      "primaryText": "Renata’s gasten vonden werk en trouwden, nadat ze bij haar hadden gelogeerd. Wat kan jouw lege kamer betekenen? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-3-stond-leeg-liggend-1.91x1",
@@ -71,7 +71,7 @@
       "name": "Renata — stond leeg (1.91:1)",
       "format": "1.91:1",
       "brand": "Takecarebnb",
-      "primaryText": "Renata’s appartement stond vaak leeg. Haar gasten vonden later werk en trouwden. Staat er bij jou ook iets leeg? Doe de quiz."
+      "primaryText": "Renata’s gasten vonden werk en trouwden, nadat ze bij haar hadden gelogeerd. Wat kan jouw lege kamer betekenen? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-4-na-een-week",
@@ -79,7 +79,7 @@
       "name": "Ariane — na een week (4:5)",
       "format": "4:5",
       "brand": "Takecarebnb",
-      "primaryText": "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Twijfel jij ook? Doe de quiz."
+      "primaryText": "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Hoeveel rust heb jij nodig? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-4-na-een-week-staand-9x16",
@@ -87,7 +87,7 @@
       "name": "Ariane — na een week (9:16)",
       "format": "9:16",
       "brand": "Takecarebnb",
-      "primaryText": "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Twijfel jij ook? Doe de quiz."
+      "primaryText": "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Hoeveel rust heb jij nodig? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-4-na-een-week-liggend-1.91x1",
@@ -95,7 +95,7 @@
       "name": "Ariane — na een week (1.91:1)",
       "format": "1.91:1",
       "brand": "Takecarebnb",
-      "primaryText": "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Twijfel jij ook? Doe de quiz."
+      "primaryText": "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Hoeveel rust heb jij nodig? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-5-roosjes",
@@ -103,7 +103,7 @@
       "name": "Leen — roosjes (4:5)",
       "format": "4:5",
       "brand": "Takecarebnb",
-      "primaryText": "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Eet jij ook graag samen? Doe de quiz."
+      "primaryText": "Leen kwam thuis van vakantie. Haar gast had eten klaargezet, met roosjes. Houd jij van leven in de brouwerij? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-5-roosjes-staand-9x16",
@@ -111,7 +111,7 @@
       "name": "Leen — roosjes (9:16)",
       "format": "9:16",
       "brand": "Takecarebnb",
-      "primaryText": "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Eet jij ook graag samen? Doe de quiz."
+      "primaryText": "Leen kwam thuis van vakantie. Haar gast had eten klaargezet, met roosjes. Houd jij van leven in de brouwerij? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-5-roosjes-liggend-1.91x1",
@@ -119,7 +119,7 @@
       "name": "Leen — roosjes (1.91:1)",
       "format": "1.91:1",
       "brand": "Takecarebnb",
-      "primaryText": "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Eet jij ook graag samen? Doe de quiz."
+      "primaryText": "Leen kwam thuis van vakantie. Haar gast had eten klaargezet, met roosjes. Houd jij van leven in de brouwerij? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-6-eet-t",
@@ -127,7 +127,7 @@
       "name": "Ilze — eet ’t (4:5)",
       "format": "4:5",
       "brand": "Takecarebnb",
-      "primaryText": "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Past het bij jou? Doe de quiz."
+      "primaryText": "Ilze wist vooraf niet wat ze kon verwachten. Benieuwd hoe het jou zou smaken? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-6-eet-t-staand-9x16",
@@ -135,7 +135,7 @@
       "name": "Ilze — eet ’t (9:16)",
       "format": "9:16",
       "brand": "Takecarebnb",
-      "primaryText": "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Past het bij jou? Doe de quiz."
+      "primaryText": "Ilze wist vooraf niet wat ze kon verwachten. Benieuwd hoe het jou zou smaken? Doe de quiz."
     },
     {
       "id": "takecarebnb-mozaiek-quiz-6-eet-t-liggend-1.91x1",
@@ -143,7 +143,7 @@
       "name": "Ilze — eet ’t (1.91:1)",
       "format": "1.91:1",
       "brand": "Takecarebnb",
-      "primaryText": "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Past het bij jou? Doe de quiz."
+      "primaryText": "Ilze wist vooraf niet wat ze kon verwachten. Benieuwd hoe het jou zou smaken? Doe de quiz."
     }
   ],
   "copy": {
@@ -152,12 +152,12 @@
     "domain": "takecarebnb.org",
     "cta": "Meer informatie",
     "primaryTexts": [
-      "Het huis van Anneke is te groot voor twee. Nu leren ze van hun gasten, en andersom. Ruimte en zin om te leren? Doe de quiz.",
-      "Ton zat alleen in een groot huis, terwijl er zoveel behoefte is. Heb jij ook kamers die leeg staan? Doe de quiz.",
-      "Renata’s appartement stond vaak leeg. Haar gasten vonden later werk en trouwden. Staat er bij jou ook iets leeg? Doe de quiz.",
-      "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Twijfel jij ook? Doe de quiz.",
-      "Leen kwam thuis van vakantie. Haar gast had gekookt en er stonden roosjes op tafel. Eet jij ook graag samen? Doe de quiz.",
-      "Ilze twijfelde of het zou klikken. Soms klikte het meer, soms minder, maar het was altijd oké. Past het bij jou? Doe de quiz."
+      "Anneke had al vaker gasten in huis. “We leren van hen, en zij van ons.” Wat zou jij leren? Ontdek wat voor gastgezin je bent.",
+      "Ton twijfelde: zou het klikken? “Nou, dat bleek prima te gaan.” Wat houdt jou tegen? Ontdek wat voor gastgezin je bent.",
+      "Renata’s gasten vonden werk en trouwden, nadat ze bij haar hadden gelogeerd. Wat kan jouw lege kamer betekenen? Doe de quiz.",
+      "Ariane twijfelde over haar privacy. Wat bleek: haar gast wilde óók privacy. Hoeveel rust heb jij nodig? Doe de quiz.",
+      "Leen kwam thuis van vakantie. Haar gast had eten klaargezet, met roosjes. Houd jij van leven in de brouwerij? Doe de quiz.",
+      "Ilze wist vooraf niet wat ze kon verwachten. Benieuwd hoe het jou zou smaken? Doe de quiz."
     ],
     "headlines": [
       "Wat voor gastgezin ben jij?",
