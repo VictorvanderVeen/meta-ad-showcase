@@ -1,0 +1,102 @@
+{
+  "client": "St. Josefs Indianer Hilfswerk",
+  "copy": {
+    "pageName": "St. Josefs Indianer Hilfswerk",
+    "color": "#004996",
+    "domain": "stjosefs.de",
+    "cta": "Mehr dazu",
+    "primaryTexts": [
+      "Manche der schönsten Weihnachtserinnerungen entstehen in der Küche. ❤️\n\nMachen Sie Weihnachten zu etwas ganz Besonderem – mit einem Weihnachtsbackbuch voller 11 Rezepte, die von Lakota-Kindern ausgewählt wurden.\n\n🎄 Sichern Sie sich jetzt Ihr Weihnachtsbackbuch!",
+      "Was gibt es Schöneres, als gemeinsam mit den Enkelkindern Weihnachtsleckereien zu backen? 🎄\n\nBringen Sie noch mehr Weihnachtsfreude in Ihre Küche – mit diesem Weihnachtsbackbuch voller 11 Rezepte, die von Lakota-Kindern ausgewählt oder geteilt wurden.\n\n🎁 Sichern Sie sich jetzt Ihr Weihnachtsbackbuch!",
+      "Sie möchten Weihnachten noch ein bisschen süßer machen? 🎄\n\nVerbringen Sie eine schöne gemeinsame Zeit beim Backen mit den Kindern in Ihrem Leben!\n\nDieses Weihnachtsbackbuch enthält 11 Rezepte, die von Lakota-Kindern ausgewählt wurden – und jede Menge Inspiration für Ihre Weihnachtsbäckerei.\n\n🎁 Sichern Sie sich jetzt Ihr Weihnachtsbackbuch!",
+      "Entdecken Sie zu Weihnachten etwas ganz Besonderes von Lakota-Kindern. ❤️\n\nFür dieses Weihnachtsbackbuch haben die Kinder 11 Rezepte ausgewählt, die ein wenig Weihnachtsfreude aus ihrer Küche zu Ihnen nach Hause bringen.\n\n🎄 Sichern Sie sich jetzt Ihr Weihnachtsbackbuch!",
+      "Gemeinsam schmeckt es einfach besser. ❤️\n\nEntdecken Sie zu Weihnachten 11 Rezepte, die von Lakota-Kindern ausgewählt wurden – in diesem besonderen Weihnachtsbackbuch.\n\n🎄 Sichern Sie sich jetzt Ihr Weihnachtsbackbuch!"
+    ],
+    "headlines": [
+      "Holen Sie sich Ihr Weihnachtsbackbuch ❤️",
+      "Weihnachten wird noch süßer",
+      "Ein Weihnachtsgeschenk voller Rezepte",
+      "Ihr kostenloses Weihnachtsbackbuch",
+      "Entdecken Sie Rezepte der Lakota"
+    ],
+    "descriptions": [
+      "11 festliche Rezepte entdecken",
+      "Kostenlose Rezepte zum Teilen",
+      "11 Rezepte zum gemeinsamen Genießen",
+      "Mehr Weihnachtsfreude in Ihrer Küche",
+      "Von Lakota-Kindern ausgewählt"
+    ]
+  },
+  "ads": [
+    {
+      "id": "stjosefs-kerst-backbuch-a1-1",
+      "file": "sjd-a1-1.jpg",
+      "name": "A1 Kinder in der Küche — Variante 1",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a1-2",
+      "file": "sjd-a1-2.jpg",
+      "name": "A1 Kinder in der Küche — Variante 2",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a1-3",
+      "file": "sjd-a1-3.jpg",
+      "name": "A1 Kinder in der Küche — Variante 3",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a1-4",
+      "file": "sjd-a1-4.jpg",
+      "name": "A1 Kinder in der Küche — Variante 4",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a1-5",
+      "file": "sjd-a1-5.jpg",
+      "name": "A1 Kinder in der Küche — Variante 5",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a2-1",
+      "file": "sjd-a2-1.jpg",
+      "name": "A2 Plätzchen — Variante 1",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a2-2",
+      "file": "sjd-a2-2.jpg",
+      "name": "A2 Plätzchen — Variante 2",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a2-3",
+      "file": "sjd-a2-3.jpg",
+      "name": "A2 Plätzchen — Variante 3",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a2-4",
+      "file": "sjd-a2-4.jpg",
+      "name": "A2 Plätzchen — Variante 4",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    },
+    {
+      "id": "stjosefs-kerst-backbuch-a2-5",
+      "file": "sjd-a2-5.jpg",
+      "name": "A2 Plätzchen — Variante 5",
+      "format": "4:5",
+      "brand": "St. Josefs Indianer Hilfswerk"
+    }
+  ]
+}
