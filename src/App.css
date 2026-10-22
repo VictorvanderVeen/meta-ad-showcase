@@ -249,31 +249,41 @@ code {
 }
 
 .btn-approve,
-.btn-reject {
+.btn-reject,
+.btn-comment {
   flex: 1;
-  padding: 9px 0;
+  padding: 7px 0;
   border-radius: 8px;
   border: 1px solid #d1d5db;
   background: #fff;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.15s;
 }
 
-.btn-approve:hover { border-color: #34c759; color: #1b7a3d; }
+/* Icon-only buttons: the colour carries the meaning, so it shows before a click too. */
+.btn-approve { color: #1b7a3d; border-color: #a7e3b9; background: #f0fbf3; }
+.btn-approve:hover { border-color: #34c759; }
 .btn-approve.active {
   background: #34c759;
   border-color: #34c759;
   color: #fff;
 }
 
-.btn-reject:hover { border-color: #ff3b30; color: #b3261e; }
+.btn-reject { color: #b3261e; border-color: #f5b5b1; background: #fff4f3; }
+.btn-reject:hover { border-color: #ff3b30; }
 .btn-reject.active {
   background: #ff3b30;
   border-color: #ff3b30;
   color: #fff;
 }
+
+.btn-comment { flex: 0 0 52px; color: #4b5563; }
+.btn-comment:hover { border-color: #1a1a1a; }
+.btn-comment.active { background: #f3f4f6; border-color: #9ca3af; }
+.btn-comment:disabled { cursor: default; }
 
 .ad-card-comment {
   width: 100%;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { t } from '../lib/i18n';
 
-// Facebook cuts a long primary text off and shows "Meer weergeven".
+// Facebook cuts a long primary text off and shows "See more".
 const COLLAPSE_AT = 160;
 
 function collapse(text) {
@@ -18,7 +19,7 @@ function PrimaryText({ text }) {
     <p className="feed-primary-text">
       {short}…{' '}
       <button type="button" className="feed-more" onClick={() => setOpen(true)}>
-        Meer weergeven
+        {t('fbMore')}
       </button>
     </p>
   );
@@ -40,7 +41,7 @@ export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, hea
         </div>
         <div className="feed-header-text">
           <span className="feed-page-name">{pageName}</span>
-          <span className="feed-sponsored">Gesponsord</span>
+          <span className="feed-sponsored">{t('fbSponsored')}</span>
         </div>
         <span className="feed-header-dots" aria-hidden="true">•••</span>
       </div>
@@ -60,9 +61,9 @@ export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, hea
       </div>
 
       <div className="feed-actions" aria-hidden="true">
-        <span>Vind ik leuk</span>
-        <span>Reageren</span>
-        <span>Delen</span>
+        <span>{t('fbLike')}</span>
+        <span>{t('fbComment')}</span>
+        <span>{t('fbShare')}</span>
       </div>
     </div>
   );

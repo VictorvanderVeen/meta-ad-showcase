@@ -1,12 +1,7 @@
 import { adImageUrl } from '../lib/ads';
 import DecisionControls from './DecisionControls';
 import FeedAd from './FeedAd';
-
-const STATUS_LABEL = {
-  approved: 'Goedgekeurd',
-  rejected: 'Afgewezen',
-  pending: 'Nog te beoordelen',
-};
+import { t } from '../lib/i18n';
 
 export default function AdCard({ ad, copy, primaryText, headline, decision, onSetStatus, onSetComment }) {
   const status = decision.status || 'pending';
@@ -26,7 +21,7 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
         ) : (
           <img src={adImageUrl(ad.file)} alt={ad.name} loading="lazy" />
         )}
-        <span className={`status-pill pill-${status}`}>{STATUS_LABEL[status]}</span>
+        <span className={`status-pill pill-${status}`}>{t(status)}</span>
       </div>
 
       <div className="ad-card-body">
@@ -39,7 +34,7 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
         <DecisionControls
           id={ad.id}
           decision={decision}
-          placeholder="Opmerking voor deze advertentie…"
+          placeholder={t('commentAd')}
           onSetStatus={onSetStatus}
           onSetComment={onSetComment}
         />

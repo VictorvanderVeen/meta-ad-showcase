@@ -1,14 +1,15 @@
 {
   "client": "St. Josefs Indianer Hilfswerk",
+  "lang": "de",
   "campaigns": [
     {
       "slug": "kerst-backbuch",
-      "name": "Weihnachtsbackbuch — Cookbook (DE)",
+      "name": "Weihnachtsbackbuch",
       "updatedAt": "2026-10-22T15:00:00.000Z"
     },
     {
       "slug": "kerst-spende",
-      "name": "Weihnachtsspende + Backbuch als Dankeschön (DE)",
+      "name": "Weihnachtsspende mit Backbuch als Dankeschön",
       "updatedAt": "2026-10-22T15:00:00.000Z"
     }
   ]

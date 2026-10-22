@@ -1,24 +1,22 @@
+import { t } from '../lib/i18n';
+
 const FILTERS = [
-  { id: 'all', label: 'Alle' },
-  { id: 'pending', label: 'Te beoordelen' },
-  { id: 'approved', label: 'Goedgekeurd' },
-  { id: 'rejected', label: 'Afgewezen' },
+  { id: 'all', label: 'filterAll' },
+  { id: 'pending', label: 'filterPending' },
+  { id: 'approved', label: 'approved' },
+  { id: 'rejected', label: 'rejected' },
 ];
 
-const SYNC_LABEL = {
-  saving: 'Opslaan…',
-  saved: '✓ Opgeslagen',
-  offline: 'Niet verstuurd. Controleer je internetverbinding.',
-};
+const SYNC_LABEL = { saving: 'saving', saved: 'saved', offline: 'offline' };
 
 export default function SummaryBar({ counts, filter, onFilter, syncStatus, onExport, onReset }) {
   return (
     <div className="summary-bar">
       <div className="summary-counts">
-        <span className="count count-total">{counts.total} totaal</span>
-        <span className="count count-approved">{counts.approved} goedgekeurd</span>
-        <span className="count count-rejected">{counts.rejected} afgewezen</span>
-        <span className="count count-pending">{counts.pending} te beoordelen</span>
+        <span className="count count-total">{counts.total} {t('countTotal')}</span>
+        <span className="count count-approved">{counts.approved} {t('countApproved')}</span>
+        <span className="count count-rejected">{counts.rejected} {t('countRejected')}</span>
+        <span className="count count-pending">{counts.pending} {t('countPending')}</span>
       </div>
 
       <div className="summary-filters">
@@ -29,7 +27,7 @@ export default function SummaryBar({ counts, filter, onFilter, syncStatus, onExp
             className={`filter-btn ${filter === f.id ? 'active' : ''}`}
             onClick={() => onFilter(f.id)}
           >
-            {f.label}
+            {t(f.label)}
           </button>
         ))}
       </div>
@@ -37,14 +35,14 @@ export default function SummaryBar({ counts, filter, onFilter, syncStatus, onExp
       <div className="summary-actions">
         {SYNC_LABEL[syncStatus] && (
           <span className={`sync-status sync-${syncStatus}`} role="status">
-            {SYNC_LABEL[syncStatus]}
+            {t(SYNC_LABEL[syncStatus])}
           </span>
         )}
         <button type="button" className="btn-export" onClick={onExport}>
-          Exporteer CSV
+          {t('exportCsv')}
         </button>
         <button type="button" className="btn-reset" onClick={onReset}>
-          Reset
+          {t('reset')}
         </button>
       </div>
     </div>

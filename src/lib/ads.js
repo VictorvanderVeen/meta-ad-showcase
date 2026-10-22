@@ -9,6 +9,10 @@
  *                    An ad may carry its own "primaryText": that ad then always shows it in its Facebook card.
  *   campaigns.json:  { "client": "Naam", "campaigns": [ { "slug", "name", "updatedAt" }, ... ] }
  *
+ *   Both may carry "lang" ("nl", "en", "de") for the interface language, see lib/i18n.js.
+ *   A campaign without its own "lang" takes the one from its client's campaigns.json,
+ *   so new campaigns from the creator follow the client's language automatically.
+ *
  * A client is either a single campaign (ads.json directly in its folder —
  * the shape before campaigns existed) or an archive of campaigns (a
  * campaigns.json listing plus one subfolder per campaign, each with its own
@@ -28,6 +32,8 @@
  * decisions are keyed on it — and unique across clients and campaigns
  * (prefix it with the client slug, and the campaign slug when there is one).
  */
+
+import { setLang, t } from './i18n';
 
 const SLUG_RE = /^[a-z0-9-]+$/;
 
@@ -94,6 +100,8 @@ function scopeDir() {
 export async function loadAds() {
   const data = await fetchJson(`${client.root}ads/${scopeDir()}ads.json`);
   if (data) {
+    if (data.lang) setLang(data.lang);
+    else if (client.campaign) setLang((await fetchJson(`${client.root}ads/${client.slug}/campaigns.json`))?.lang);
     const ads = Array.isArray(data.ads) ? data.ads : [];
     const clientName = data.client || ads[0]?.brand || '';
     return {
@@ -110,6 +118,7 @@ export async function loadAds() {
   // this client is an archive of campaigns, so load its listing instead.
   const list = await fetchJson(`${client.root}ads/${client.slug}/campaigns.json`);
   if (!list) throw new Error('Kon ads.json niet laden');
+  setLang(list.lang);
   const campaigns = Array.isArray(list.campaigns) ? list.campaigns : [];
   return {
     kind: 'campaigns',
@@ -129,9 +138,9 @@ async function fetchJson(url) {
 }
 
 const COPY_KINDS = [
-  { kind: 'primary', field: 'primaryTexts', title: 'Primaire tekst (boven het beeld)' },
-  { kind: 'headline', field: 'headlines', title: 'Kop (onder het beeld)' },
-  { kind: 'description', field: 'descriptions', title: 'Beschrijving (onder de kop)' },
+  { kind: 'primary', field: 'primaryTexts', title: 'kindPrimary' },
+  { kind: 'headline', field: 'headlines', title: 'kindHeadline' },
+  { kind: 'description', field: 'descriptions', title: 'kindDescription' },
 ];
 
 // Copy lines are shaped like ads ({ id, name, format, brand }) so decisions,
@@ -139,16 +148,19 @@ const COPY_KINDS = [
 // position: reordering the texts in ads.json moves their decisions along.
 function copyGroups(copy, clientName) {
   if (!copy) return [];
-  return COPY_KINDS.map(({ kind, field, title }) => ({
-    kind,
-    title,
-    items: (copy[field] || []).map((text, index) => ({
-      id: `${scopeSlug}-copy-${kind}-${index + 1}`,
-      name: text,
-      format: title,
-      brand: clientName,
-    })),
-  })).filter((group) => group.items.length > 0);
+  return COPY_KINDS.map(({ kind, field, title: titleKey }) => {
+    const title = t(titleKey);
+    return {
+      kind,
+      title,
+      items: (copy[field] || []).map((text, index) => ({
+        id: `${scopeSlug}-copy-${kind}-${index + 1}`,
+        name: text,
+        format: title,
+        brand: clientName,
+      })),
+    };
+  }).filter((group) => group.items.length > 0);
 }
 
 /** Path to an ad image of the current client/campaign. */

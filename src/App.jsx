@@ -12,6 +12,7 @@ import {
   onSyncStatus,
   EMPTY_DECISION,
 } from './lib/storage';
+import { t } from './lib/i18n';
 import { buildCsv, downloadCsv } from './lib/csv';
 import './App.css';
 
@@ -76,7 +77,7 @@ export default function App() {
   };
 
   const handleReset = () => {
-    if (!window.confirm('Alle beslissingen en opmerkingen wissen?')) return;
+    if (!window.confirm(t('resetConfirm'))) return;
     setDecisions(clearDecisions());
   };
 
@@ -124,16 +125,16 @@ export default function App() {
         <h1>Meta Ad Showcase{clientName ? ` — ${clientName}` : ''}</h1>
         <p className="app-subtitle">
           {status === 'campaigns'
-            ? 'Kies een campagne.'
-            : 'Beoordeel en keur de advertenties goed of af.'}
+            ? t('chooseCampaign')
+            : t('reviewIntro')}
         </p>
       </header>
 
-      {status === 'loading' && <p className="state-msg">Advertenties laden…</p>}
+      {status === 'loading' && <p className="state-msg">{t('loading')}</p>}
 
       {status === 'error' && (
         <div className="state-msg state-error">
-          <p>Kon de advertenties niet laden: {error}</p>
+          <p>{t('loadError')} {error}</p>
           <p className="state-hint">
             Zorg dat <code>public/ads/{client.slug}/{client.campaign ? `${client.campaign}/` : ''}ads.json</code> bestaat
             en naar bestaande PNG&apos;s verwijst.
@@ -145,7 +146,7 @@ export default function App() {
 
       {status === 'ready' && ads.length === 0 && (
         <p className="state-msg">
-          Nog geen advertenties. Voeg PNG&apos;s toe in{' '}
+          {t('noAds')} Voeg PNG&apos;s toe in{' '}
           <code>public/ads/{client.slug}/{client.campaign ? `${client.campaign}/` : ''}</code>.
         </p>
       )}
@@ -175,7 +176,7 @@ export default function App() {
             ))}
           </main>
           {visibleAds.length === 0 && (
-            <p className="state-msg">Geen advertenties in dit filter.</p>
+            <p className="state-msg">{t('emptyFilter')}</p>
           )}
           {copyGroups.length > 0 && (
             <CopyOverview

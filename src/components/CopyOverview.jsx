@@ -1,4 +1,5 @@
 import DecisionControls from './DecisionControls';
+import { t } from '../lib/i18n';
 
 /**
  * All Meta copy of the client in one list, each line with its own decision.
@@ -8,7 +9,7 @@ import DecisionControls from './DecisionControls';
 export default function CopyOverview({ groups, decisions, emptyDecision, onSetStatus, onSetComment }) {
   return (
     <section className="copy-overview">
-      <h2>Alle advertentieteksten</h2>
+      <h2>{t('allTexts')}</h2>
 
       {groups.map((group) => (
         <div key={group.kind} className="copy-group">
@@ -28,7 +29,7 @@ export default function CopyOverview({ groups, decisions, emptyDecision, onSetSt
                       disabled={shown}
                       onClick={() => group.onSelect(index)}
                     >
-                      {shown ? '✓ Staat in het voorbeeld' : 'Gebruik in het voorbeeld'}
+                      {shown ? t('inPreview') : t('useInPreview')}
                     </button>
                   )}
                 </div>
@@ -36,7 +37,7 @@ export default function CopyOverview({ groups, decisions, emptyDecision, onSetSt
                   <DecisionControls
                     id={item.id}
                     decision={decision}
-                    placeholder="Opmerking bij deze tekst…"
+                    placeholder={t('commentText')}
                     onSetStatus={onSetStatus}
                     onSetComment={onSetComment}
                   />
