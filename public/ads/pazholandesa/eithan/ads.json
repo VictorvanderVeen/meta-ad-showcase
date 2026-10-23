@@ -1,0 +1,154 @@
+{
+  "client": "PAZ Holandesa",
+  "ads": [
+    {
+      "id": "pazholandesa-eithan-01-portrait",
+      "file": "paz-01-portrait.jpg",
+      "name": "01 Waar je wieg staat — staand",
+      "format": "4:5",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-01-square",
+      "file": "paz-01-square.jpg",
+      "name": "01 Waar je wieg staat — vierkant",
+      "format": "1:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-01-landscape",
+      "file": "paz-01-landscape.jpg",
+      "name": "01 Waar je wieg staat — liggend",
+      "format": "1.91:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-02-portrait",
+      "file": "paz-02-portrait.jpg",
+      "name": "02 Verdient Eithan een beter leven? — staand",
+      "format": "4:5",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-02-square",
+      "file": "paz-02-square.jpg",
+      "name": "02 Verdient Eithan een beter leven? — vierkant",
+      "format": "1:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-02-landscape",
+      "file": "paz-02-landscape.jpg",
+      "name": "02 Verdient Eithan een beter leven? — liggend",
+      "format": "1.91:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-04-portrait",
+      "file": "paz-04-portrait.jpg",
+      "name": "04 Een berichtje voor Eithan — staand",
+      "format": "4:5",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-04-square",
+      "file": "paz-04-square.jpg",
+      "name": "04 Een berichtje voor Eithan — vierkant",
+      "format": "1:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-04-landscape",
+      "file": "paz-04-landscape.jpg",
+      "name": "04 Een berichtje voor Eithan — liggend",
+      "format": "1.91:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-06-portrait",
+      "file": "paz-06-portrait.jpg",
+      "name": "06 Een klein gebaar — staand",
+      "format": "4:5",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-06-square",
+      "file": "paz-06-square.jpg",
+      "name": "06 Een klein gebaar — vierkant",
+      "format": "1:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-06-landscape",
+      "file": "paz-06-landscape.jpg",
+      "name": "06 Een klein gebaar — liggend",
+      "format": "1.91:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-07-portrait",
+      "file": "paz-07-portrait.jpg",
+      "name": "07 In juni werd de lip gesloten — staand",
+      "format": "4:5",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-07-square",
+      "file": "paz-07-square.jpg",
+      "name": "07 In juni werd de lip gesloten — vierkant",
+      "format": "1:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-07-landscape",
+      "file": "paz-07-landscape.jpg",
+      "name": "07 In juni werd de lip gesloten — liggend",
+      "format": "1.91:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-08-portrait",
+      "file": "paz-08-portrait.jpg",
+      "name": "08 Eten, lachen, later naar school — staand",
+      "format": "4:5",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-08-square",
+      "file": "paz-08-square.jpg",
+      "name": "08 Eten, lachen, later naar school — vierkant",
+      "format": "1:1",
+      "brand": "PAZ Holandesa"
+    },
+    {
+      "id": "pazholandesa-eithan-08-landscape",
+      "file": "paz-08-landscape.jpg",
+      "name": "08 Eten, lachen, later naar school — liggend",
+      "format": "1.91:1",
+      "brand": "PAZ Holandesa"
+    }
+  ],
+  "copy": {
+    "pageName": "PAZ Holandesa",
+    "color": "#e31a22",
+    "domain": "Formulier op Facebook",
+    "cta": "Aanmelden",
+    "primaryTexts": [
+      "Eithan werd geboren met een schisis, in Peru. Stuur hem een berichtje. Wij bezorgen het bij hem en zijn ouders. ❤️",
+      "Waar je wieg staat, mag niet bepalen hoe je toekomst eruitziet. Vind jij dat ook? Zet je naam onder ons berichtje aan Eithan.",
+      "In juni sloten artsen van PAZ Holandesa de lip van kleine Eithan. Wens hem en zijn ouders het beste. ⬇️",
+      "Een klein gebaar voor een kleine jongen. Teken het berichtje aan Eithan. Het kost je tien seconden.",
+      "Elk kind verdient een gezonde toekomst, waar het ook geboren is. Laat Eithan weten dat jij dat ook vindt. ❤️"
+    ],
+    "headlines": [
+      "Stuur Eithan een berichtje",
+      "Teken het berichtje aan Eithan",
+      "Wij bezorgen jouw berichtje",
+      "Wens Eithan het beste ❤️",
+      "Tien seconden voor Eithan"
+    ],
+    "descriptions": [
+      "Wij bezorgen het"
+    ]
+  }
+}

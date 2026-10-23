@@ -1,0 +1,11 @@
+{
+  "client": "PAZ Holandesa",
+  "lang": "nl",
+  "campaigns": [
+    {
+      "slug": "eithan",
+      "name": "Leadcampagne: een berichtje voor Eithan",
+      "updatedAt": "2026-10-23T16:00:00.000Z"
+    }
+  ]
+}
