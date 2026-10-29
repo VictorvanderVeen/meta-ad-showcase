@@ -1,6 +1,6 @@
 /**
  * Interface texts per language. A client picks its language with "lang" in
- * ads.json and/or campaigns.json ("nl", "en", "de"); without it the showcase
+ * ads.json and/or campaigns.json ("nl", "en", "de", "sv"); without it the showcase
  * stays Dutch. Adding a language = adding one block below.
  *
  * The Facebook card texts (sponsored, like, comment, share) follow the same
@@ -129,6 +129,47 @@ const STRINGS = {
     fbLike: 'Gefällt mir',
     fbComment: 'Kommentieren',
     fbShare: 'Teilen',
+  },
+  sv: {
+    locale: 'sv-SE',
+    chooseCampaign: 'Välj en kampanj.',
+    reviewIntro: 'Granska annonserna och godkänn eller avvisa dem.',
+    loading: 'Laddar annonser…',
+    loadError: 'Det gick inte att ladda annonserna:',
+    noAds: 'Inga annonser ännu.',
+    emptyFilter: 'Inga annonser i det här filtret.',
+    resetConfirm: 'Radera alla beslut och kommentarer?',
+    approve: 'Godkänn',
+    reject: 'Avvisa',
+    comment: 'Kommentar',
+    approved: 'Godkänd',
+    rejected: 'Avvisad',
+    pending: 'Att granska',
+    filterAll: 'Alla',
+    filterPending: 'Att granska',
+    countTotal: 'totalt',
+    countApproved: 'godkända',
+    countRejected: 'avvisade',
+    countPending: 'att granska',
+    saving: 'Sparar…',
+    saved: '✓ Sparat',
+    offline: 'Inte skickat. Kontrollera din internetanslutning.',
+    exportCsv: 'Exportera CSV',
+    reset: 'Återställ',
+    updated: 'uppdaterad',
+    commentAd: 'Kommentar till den här annonsen…',
+    commentText: 'Kommentar till den här texten…',
+    allTexts: 'Alla annonstexter',
+    useInPreview: 'Visa i förhandsvisningen',
+    inPreview: '✓ Visas i förhandsvisningen',
+    kindPrimary: 'Primär text (ovanför bilden)',
+    kindHeadline: 'Rubrik (under bilden)',
+    kindDescription: 'Beskrivning (under rubriken)',
+    fbSponsored: 'Sponsrad',
+    fbMore: 'Visa mer',
+    fbLike: 'Gilla',
+    fbComment: 'Kommentera',
+    fbShare: 'Dela',
   },
 };
 

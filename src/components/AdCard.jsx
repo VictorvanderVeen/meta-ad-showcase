@@ -1,4 +1,5 @@
 import { adImageUrl } from '../lib/ads';
+import AdMedia from './AdMedia';
 import DecisionControls from './DecisionControls';
 import FeedAd from './FeedAd';
 import { t } from '../lib/i18n';
@@ -20,7 +21,7 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
             description={ad.description}
           />
         ) : (
-          <img src={adImageUrl(ad.file)} alt={ad.name} loading="lazy" />
+          <AdMedia src={adImageUrl(ad.file)} alt={ad.name} />
         )}
         <span className={`status-pill pill-${status}`}>{t(status)}</span>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { t } from '../lib/i18n';
+import AdMedia from './AdMedia';
 
 // Facebook cuts a long primary text off and shows "See more".
 const COLLAPSE_AT = 160;
@@ -49,7 +50,7 @@ export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, hea
       {/* key: a newly picked variant starts collapsed again */}
       {primaryText && <PrimaryText key={primaryText} text={primaryText} />}
 
-      <img className="feed-image" src={imageUrl} alt={alt} loading="lazy" />
+      <AdMedia className="feed-image" src={imageUrl} alt={alt} />
 
       <div className="feed-link-row">
         <div className="feed-link-text">

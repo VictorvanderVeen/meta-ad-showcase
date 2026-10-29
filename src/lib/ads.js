@@ -10,7 +10,7 @@
  *                    always shows them in its Facebook card (e.g. campaigns with phases, each with its own copy).
  *   campaigns.json:  { "client": "Naam", "campaigns": [ { "slug", "name", "updatedAt" }, ... ] }
  *
- *   Both may carry "lang" ("nl", "en", "de") for the interface language, see lib/i18n.js.
+ *   Both may carry "lang" ("nl", "en", "de", "sv") for the interface language, see lib/i18n.js.
  *   A campaign without its own "lang" takes the one from its client's campaigns.json,
  *   so new campaigns from the creator follow the client's language automatically.
  *

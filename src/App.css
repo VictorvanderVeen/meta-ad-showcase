@@ -196,7 +196,8 @@ code {
   min-height: 200px;
 }
 
-.ad-card-media img {
+.ad-card-media img,
+.ad-card-media video {
   width: 100%;
   height: auto;
   display: block;
