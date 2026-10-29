@@ -16,7 +16,8 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
             copy={copy}
             pageName={copy.pageName || ad.brand}
             primaryText={ad.primaryText || primaryText}
-            headline={headline}
+            headline={ad.headline || headline}
+            description={ad.description}
           />
         ) : (
           <img src={adImageUrl(ad.file)} alt={ad.name} loading="lazy" />

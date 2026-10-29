@@ -30,8 +30,8 @@ function PrimaryText({ text }) {
  * way it will run. `copy` is the client's Meta copy (see lib/ads.js);
  * `primaryText` and `headline` are the variants currently picked as example.
  */
-export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, headline }) {
-  const description = copy.descriptions?.[0];
+export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, headline, description: ownDescription }) {
+  const description = ownDescription || copy.descriptions?.[0];
 
   return (
     <div className="feed-ad">

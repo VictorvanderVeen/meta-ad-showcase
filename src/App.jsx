@@ -103,9 +103,12 @@ export default function App() {
 
   const groupOf = (kind) => copyGroups.find((group) => group.kind === kind)?.items || [];
   const primaryTexts = groupOf('primary');
-  // Ads with their own `primaryText` in ads.json always show that text, so
-  // picking a primary text below would change nothing in the ads above.
-  const ownPrimaryTexts = ads.length > 0 && ads.every((ad) => ad.primaryText);
+  // Ads with their own `primaryText` (or `headline`) in ads.json always show
+  // that text, so picking one below would change nothing in the ads above.
+  const ownTexts = {
+    primary: ads.length > 0 && ads.every((ad) => ad.primaryText),
+    headline: ads.length > 0 && ads.every((ad) => ad.headline),
+  };
   const headlines = groupOf('headline');
   // The texts are picked at the bottom of the page: scroll back up so the
   // client sees the ads change.
@@ -183,7 +186,7 @@ export default function App() {
               groups={copyGroups.map((group) => ({
                 ...group,
                 selected: variant[group.kind],
-                onSelect: group.kind in variant && !(group.kind === 'primary' && ownPrimaryTexts)
+                onSelect: group.kind in variant && !ownTexts[group.kind]
                   ? selectVariant(group.kind)
                   : undefined,
               }))}

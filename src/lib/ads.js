@@ -6,7 +6,8 @@
  *   public/ads/<klant>/<campagne>/ads.json   →  …/meta-ad-showcase/<klant>/<campagne>/
  *
  *   ads.json:        { "client": "Naam", "ads": [ { "id", "file", "name", "format", "brand" }, ... ], "copy": {...} }
- *                    An ad may carry its own "primaryText": that ad then always shows it in its Facebook card.
+ *                    An ad may carry its own "primaryText", "headline" and "description": that ad then
+ *                    always shows them in its Facebook card (e.g. campaigns with phases, each with its own copy).
  *   campaigns.json:  { "client": "Naam", "campaigns": [ { "slug", "name", "updatedAt" }, ... ] }
  *
  *   Both may carry "lang" ("nl", "en", "de") for the interface language, see lib/i18n.js.
