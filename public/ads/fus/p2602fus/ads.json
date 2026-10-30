@@ -20,8 +20,26 @@
     {
       "id": "fus-p2602fus-a",
       "file": "fus-a.mp4",
-      "name": "A · Nästa genombrott kan börja med dig (video)",
+      "name": "A · Nästa genombrott kan börja med dig (video) — vierkant",
       "format": "1:1",
+      "brand": "Forska Utan Djurförsök",
+      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
+      "headline": "Klicka för att stärka forskningen"
+    },
+    {
+      "id": "fus-p2602fus-a-staand",
+      "file": "fus-a-staand.mp4",
+      "name": "A · Nästa genombrott kan börja med dig (video) — staand",
+      "format": "9:16",
+      "brand": "Forska Utan Djurförsök",
+      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
+      "headline": "Klicka för att stärka forskningen"
+    },
+    {
+      "id": "fus-p2602fus-a-liggend",
+      "file": "fus-a-liggend.mp4",
+      "name": "A · Nästa genombrott kan börja med dig (video) — liggend",
+      "format": "16:9",
       "brand": "Forska Utan Djurförsök",
       "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
       "headline": "Klicka för att stärka forskningen"
@@ -29,8 +47,26 @@
     {
       "id": "fus-p2602fus-b",
       "file": "fus-b.jpg",
-      "name": "B · Håll utkik i brevlådan",
+      "name": "B · Håll utkik i brevlådan — vierkant",
       "format": "1:1",
+      "brand": "Forska Utan Djurförsök",
+      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
+      "headline": "Klicka för att stärka forskningen"
+    },
+    {
+      "id": "fus-p2602fus-b-staand",
+      "file": "fus-b-staand.jpg",
+      "name": "B · Håll utkik i brevlådan — staand",
+      "format": "9:16",
+      "brand": "Forska Utan Djurförsök",
+      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
+      "headline": "Klicka för att stärka forskningen"
+    },
+    {
+      "id": "fus-p2602fus-b-liggend",
+      "file": "fus-b-liggend.jpg",
+      "name": "B · Håll utkik i brevlådan — liggend",
+      "format": "16:9",
       "brand": "Forska Utan Djurförsök",
       "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
       "headline": "Klicka för att stärka forskningen"
@@ -38,8 +74,26 @@
     {
       "id": "fus-p2602fus-c",
       "file": "fus-c.jpg",
-      "name": "C · Insamling för svensk forskning 2026",
+      "name": "C · Insamling för svensk forskning 2026 — vierkant",
       "format": "1:1",
+      "brand": "Forska Utan Djurförsök",
+      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige.",
+      "headline": "Läs mer om hur du kan stärka forskningen"
+    },
+    {
+      "id": "fus-p2602fus-c-staand",
+      "file": "fus-c-staand.jpg",
+      "name": "C · Insamling för svensk forskning 2026 — staand",
+      "format": "9:16",
+      "brand": "Forska Utan Djurförsök",
+      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige.",
+      "headline": "Läs mer om hur du kan stärka forskningen"
+    },
+    {
+      "id": "fus-p2602fus-c-liggend",
+      "file": "fus-c-liggend.jpg",
+      "name": "C · Insamling för svensk forskning 2026 — liggend",
+      "format": "16:9",
       "brand": "Forska Utan Djurförsök",
       "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige.",
       "headline": "Läs mer om hur du kan stärka forskningen"
