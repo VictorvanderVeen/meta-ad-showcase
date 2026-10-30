@@ -23,10 +23,10 @@
       "description": "Collecteweek 9-14 nov"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_v01_aanbellen-liggend",
-      "file": "NSGK_coll_V01_aanbellen_liggend.jpg",
-      "name": "Vooraf · V01 Straks bel ik aan! — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_v01_aanbellen-story",
+      "file": "NSGK_coll_V01_aanbellen_story.jpg",
+      "name": "Vooraf · V01 Straks bel ik aan! — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Van 9 t/m 14 november belt er een collectant bij je aan. Voor kinderen zoals Jayce, die ver moeten reizen naar school.",
       "headline": "9 t/m 14 nov: collectant aan je deur",
@@ -53,10 +53,10 @@
       "description": "Collecteweek 9-14 nov"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_v02_ver-liggend",
-      "file": "NSGK_coll_V02_ver_liggend.jpg",
-      "name": "Vooraf · V02 Elke dag ver naar school? — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_v02_ver-story",
+      "file": "NSGK_coll_V02_ver_story.jpg",
+      "name": "Vooraf · V02 Elke dag ver naar school? — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Geef tijdens de Week van het Gehandicapte Kind aan de collectant.",
       "headline": "Doe open voor Jayce",
@@ -83,10 +83,10 @@
       "description": "Collecteweek 9-14 nov"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_v03_klaarleggen-liggend",
-      "file": "NSGK_coll_V03_klaarleggen_liggend.jpg",
-      "name": "Vooraf · V03 Leg alvast iets klaar — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_v03_klaarleggen-story",
+      "file": "NSGK_coll_V03_klaarleggen_story.jpg",
+      "name": "Vooraf · V03 Leg alvast iets klaar — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Van 9 t/m 14 november belt er een collectant bij je aan. Voor kinderen zoals Jayce, die ver moeten reizen naar school.",
       "headline": "9 t/m 14 nov: collectant aan je deur",
@@ -113,10 +113,10 @@
       "description": "Collecteweek 9-14 nov"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_v04_buurtgenoot-liggend",
-      "file": "NSGK_coll_V04_buurtgenoot_liggend.jpg",
-      "name": "Vooraf · V04 Er belt iemand aan — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_v04_buurtgenoot-story",
+      "file": "NSGK_coll_V04_buurtgenoot_story.jpg",
+      "name": "Vooraf · V04 Er belt iemand aan — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Geef tijdens de Week van het Gehandicapte Kind aan de collectant.",
       "headline": "Doe open voor Jayce",
@@ -143,10 +143,10 @@
       "description": "Geef aan de collectant"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_t01_deze_week-liggend",
-      "file": "NSGK_coll_T01_deze_week_liggend.jpg",
-      "name": "Tijdens · T01 Deze week aan de deur — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_t01_deze_week-story",
+      "file": "NSGK_coll_T01_deze_week_story.jpg",
+      "name": "Tijdens · T01 Deze week aan de deur — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Deze week komt er een collectant bij je langs. Doe open en geef, contant of via de QR-code op de bus.",
       "headline": "Geef aan de collectant",
@@ -173,10 +173,10 @@
       "description": "Geef aan de collectant"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_t02_qr-liggend",
-      "file": "NSGK_coll_T02_qr_liggend.jpg",
-      "name": "Tijdens · T02 Geen kleingeld in huis? — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_t02_qr-story",
+      "file": "NSGK_coll_T02_qr_story.jpg",
+      "name": "Tijdens · T02 Geen kleingeld in huis? — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Dichtbij huis naar school is niet voor ieder kind vanzelfsprekend. Geef deze week aan de collectant.",
       "headline": "Geen contant? Scan de QR-code",
@@ -203,10 +203,10 @@
       "description": "Geef aan de collectant"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_t03_munt-liggend",
-      "file": "NSGK_coll_T03_munt_liggend.jpg",
-      "name": "Tijdens · T03 Elke munt telt — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_t03_munt-story",
+      "file": "NSGK_coll_T03_munt_story.jpg",
+      "name": "Tijdens · T03 Elke munt telt — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Deze week komt er een collectant bij je langs. Doe open en geef, contant of via de QR-code op de bus.",
       "headline": "Geef aan de collectant",
@@ -233,10 +233,10 @@
       "description": "Geef aan de collectant"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_t04_wie_belt-liggend",
-      "file": "NSGK_coll_T04_wie_belt_liggend.jpg",
-      "name": "Tijdens · T04 Wie belt daar? — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_t04_wie_belt-story",
+      "file": "NSGK_coll_T04_wie_belt_story.jpg",
+      "name": "Tijdens · T04 Wie belt daar? — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Dichtbij huis naar school is niet voor ieder kind vanzelfsprekend. Geef deze week aan de collectant.",
       "headline": "Geen contant? Scan de QR-code",
@@ -263,10 +263,10 @@
       "description": "Geef alsnog online"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_n01_gemist-liggend",
-      "file": "NSGK_coll_N01_gemist_liggend.jpg",
-      "name": "Na · N01 Collectant gemist? — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_n01_gemist-story",
+      "file": "NSGK_coll_N01_gemist_story.jpg",
+      "name": "Na · N01 Collectant gemist? — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Was je niet thuis toen de collectant aanbelde? Je kunt nog steeds geven, gewoon online.",
       "headline": "Collectant gemist? Geef online",
@@ -293,10 +293,10 @@
       "description": "Geef alsnog online"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_n02_niet_thuis-liggend",
-      "file": "NSGK_coll_N02_niet_thuis_liggend.jpg",
-      "name": "Na · N02 Niet thuis? — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_n02_niet_thuis-story",
+      "file": "NSGK_coll_N02_niet_thuis_story.jpg",
+      "name": "Na · N02 Niet thuis? — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Jayce reist elke dag van Krommenie naar Alkmaar om naar school te gaan. Collecte gemist? Geef alsnog online.",
       "headline": "Je kunt nog steeds geven",
@@ -323,10 +323,10 @@
       "description": "Geef alsnog online"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_n03_bus_weg-liggend",
-      "file": "NSGK_coll_N03_bus_weg_liggend.jpg",
-      "name": "Na · N03 De bus is al weg — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_n03_bus_weg-story",
+      "file": "NSGK_coll_N03_bus_weg_story.jpg",
+      "name": "Na · N03 De bus is al weg — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Was je niet thuis toen de collectant aanbelde? Je kunt nog steeds geven, gewoon online.",
       "headline": "Collectant gemist? Geef online",
@@ -353,10 +353,10 @@
       "description": "Geef alsnog online"
     },
     {
-      "id": "gehandicaptekind-collecteweek-nsgk_coll_n04_terugblik-liggend",
-      "file": "NSGK_coll_N04_terugblik_liggend.jpg",
-      "name": "Na · N04 Dichtbij huis naar school? — liggend",
-      "format": "1.91:1",
+      "id": "gehandicaptekind-collecteweek-nsgk_coll_n04_terugblik-story",
+      "file": "NSGK_coll_N04_terugblik_story.jpg",
+      "name": "Na · N04 Dichtbij huis naar school? — story",
+      "format": "9:16",
       "brand": "Het Gehandicapte Kind",
       "primaryText": "Jayce reist elke dag van Krommenie naar Alkmaar om naar school te gaan. Collecte gemist? Geef alsnog online.",
       "headline": "Je kunt nog steeds geven",
