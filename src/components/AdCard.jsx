@@ -19,6 +19,7 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
             primaryText={ad.primaryText || primaryText}
             headline={ad.headline || headline}
             description={ad.description}
+            cta={ad.cta}
           />
         ) : (
           <AdMedia src={adImageUrl(ad.file)} alt={ad.name} />

@@ -31,8 +31,9 @@ function PrimaryText({ text }) {
  * way it will run. `copy` is the client's Meta copy (see lib/ads.js);
  * `primaryText` and `headline` are the variants currently picked as example.
  */
-export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, headline, description: ownDescription }) {
+export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, headline, description: ownDescription, cta: ownCta }) {
   const description = ownDescription || copy.descriptions?.[0];
+  const cta = ownCta || copy.cta;
 
   return (
     <div className="feed-ad">
@@ -58,7 +59,7 @@ export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, hea
           {headline && <span className="feed-link-headline">{headline}</span>}
           {description && <span className="feed-link-description">{description}</span>}
         </div>
-        {copy.cta && <span className="feed-cta-btn">{copy.cta}</span>}
+        {cta && <span className="feed-cta-btn">{cta}</span>}
       </div>
 
       <div className="feed-actions" aria-hidden="true">
