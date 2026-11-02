@@ -1,0 +1,134 @@
+{
+  "client": "Het Gehandicapte Kind",
+  "lang": "nl",
+  "copy": {
+    "pageName": "Het Gehandicapte Kind",
+    "color": "#e3241b",
+    "domain": "gehandicaptekind.nl",
+    "cta": "Aanmelden",
+    "primaryTexts": [
+      "Levon zwaait elke ochtend zijn zusje uit. Zij gaat naar de school om de hoek. Hij mag daar niet naartoe. Teken de petitie.",
+      "Zijn zusje gaat naar de school om de hoek. Levon niet. Vind jij ook dat ieder kind in de eigen buurt naar school moet kunnen?",
+      "Levon is elke dag uren onderweg naar school. Vriendjes in de buurt? Die heeft hij niet. Dat kan anders. Teken mee.",
+      "Hij woont in de buurt. Maar hij hoort er niet bij. Geen enkel kind mag eenzaam zijn. Zet jij je naam onder de petitie?",
+      "Een high-five op straat in plaats van een starende blik. Het begint bij een school in de buurt. Teken de petitie voor Levon."
+    ],
+    "headlines": [
+      "Teken de petitie voor Levon",
+      "Zijn zusje wel. Levon niet.",
+      "Geen enkel kind mag eenzaam zijn",
+      "Ieder kind naar school in de buurt",
+      "Een school om de hoek voor ieder kind"
+    ],
+    "descriptions": [
+      "Teken nu de petitie"
+    ]
+  },
+  "ads": [
+    {
+      "id": "gehandicaptekind-levon-petitie-01_school_van_zusje-staand",
+      "file": "GK_levon_01_school_van_zusje_staand.jpg",
+      "name": "01 Ik wil ook naar de school van mijn zusje. — staand",
+      "format": "4:5",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-01_school_van_zusje-vierkant",
+      "file": "GK_levon_01_school_van_zusje_vierkant.jpg",
+      "name": "01 Ik wil ook naar de school van mijn zusje. — vierkant",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-01_school_van_zusje-story",
+      "file": "GK_levon_01_school_van_zusje_story.jpg",
+      "name": "01 Ik wil ook naar de school van mijn zusje. — story",
+      "format": "9:16",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-02_waarom_mag_zusje_wel-staand",
+      "file": "GK_levon_02_waarom_mag_zusje_wel_staand.jpg",
+      "name": "02 Waarom mag mijn zusje wel? — staand",
+      "format": "4:5",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-02_waarom_mag_zusje_wel-vierkant",
+      "file": "GK_levon_02_waarom_mag_zusje_wel_vierkant.jpg",
+      "name": "02 Waarom mag mijn zusje wel? — vierkant",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-02_waarom_mag_zusje_wel-story",
+      "file": "GK_levon_02_waarom_mag_zusje_wel_story.jpg",
+      "name": "02 Waarom mag mijn zusje wel? — story",
+      "format": "9:16",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-03_vriendjes_in_straat-staand",
+      "file": "GK_levon_03_vriendjes_in_straat_staand.jpg",
+      "name": "03 Ik wil ook vriendjes in mijn straat. — staand",
+      "format": "4:5",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-03_vriendjes_in_straat-vierkant",
+      "file": "GK_levon_03_vriendjes_in_straat_vierkant.jpg",
+      "name": "03 Ik wil ook vriendjes in mijn straat. — vierkant",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-03_vriendjes_in_straat-story",
+      "file": "GK_levon_03_vriendjes_in_straat_story.jpg",
+      "name": "03 Ik wil ook vriendjes in mijn straat. — story",
+      "format": "9:16",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-04_erbij_horen-staand",
+      "file": "GK_levon_04_erbij_horen_staand.jpg",
+      "name": "04 Ik wil er gewoon bij horen. — staand",
+      "format": "4:5",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-04_erbij_horen-vierkant",
+      "file": "GK_levon_04_erbij_horen_vierkant.jpg",
+      "name": "04 Ik wil er gewoon bij horen. — vierkant",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-04_erbij_horen-story",
+      "file": "GK_levon_04_erbij_horen_story.jpg",
+      "name": "04 Ik wil er gewoon bij horen. — story",
+      "format": "9:16",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-05_met_zusje_naar_school-staand",
+      "file": "GK_levon_05_met_zusje_naar_school_staand.jpg",
+      "name": "05 Ik wil ook graag met mijn zusje naar school. — staand",
+      "format": "4:5",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-05_met_zusje_naar_school-vierkant",
+      "file": "GK_levon_05_met_zusje_naar_school_vierkant.jpg",
+      "name": "05 Ik wil ook graag met mijn zusje naar school. — vierkant",
+      "format": "1:1",
+      "brand": "Het Gehandicapte Kind"
+    },
+    {
+      "id": "gehandicaptekind-levon-petitie-05_met_zusje_naar_school-story",
+      "file": "GK_levon_05_met_zusje_naar_school_story.jpg",
+      "name": "05 Ik wil ook graag met mijn zusje naar school. — story",
+      "format": "9:16",
+      "brand": "Het Gehandicapte Kind"
+    }
+  ]
+}
