@@ -8,9 +8,9 @@
     "primaryTexts": [
       "Onze vrijwilligers in Nepal wonen zelf in de getroffen dorpen. Ze weten waar elk gezin is. Help jij ze verder?",
       "Jouw hulp is nog steeds nodig. Er ontbreken dekens, zeep en emmers. De vrijwilligers staan klaar. Jouw gift helpt ze verder.",
-      "De nachten in Nepal worden koud. Veel gezinnen zitten nog in de opvang. Help met dekens en brandstof.",
+      "De nachten in Nepal worden koud. Veel gezinnen zitten nog in de opvang. Help met dekens.",
       "Ruim twee maanden na de overstroming is de nood in Nepal nog groot. Lokale vrijwilligers helpen gezinnen verder. Help je mee?",
-      "De school in Nuwakot is weggevaagd. Help kinderen terug in de klas met nieuwe schoolspullen."
+      "De school in Nuwakot (Nepal) is weggevaagd. Help kinderen terug in de klas met nieuwe schoolspullen."
     ],
     "headlines": [
       "Help de vrijwilligers in Nepal",
@@ -48,7 +48,7 @@
       "name": "Chat 3 · Help met nieuwe schoolspullen",
       "format": "1:1",
       "brand": "VSO Nederland",
-      "primaryText": "De school in Nuwakot is weggevaagd. Help kinderen terug in de klas met nieuwe schoolspullen.",
+      "primaryText": "De school in Nuwakot (Nepal) is weggevaagd. Help kinderen terug in de klas met nieuwe schoolspullen.",
       "headline": "Help kinderen terug naar school"
     },
     {
@@ -57,7 +57,7 @@
       "name": "Tekst 1 · Families hebben nog steeds hulp nodig",
       "format": "1:1",
       "brand": "VSO Nederland",
-      "primaryText": "De nachten in Nepal worden koud. Veel gezinnen zitten nog in de opvang. Help met dekens en brandstof.",
+      "primaryText": "De nachten in Nepal worden koud. Veel gezinnen zitten nog in de opvang. Help met dekens.",
       "headline": "De nood in Nepal is nog groot"
     },
     {
@@ -66,7 +66,7 @@
       "name": "Tekst 2 · De mensen die kunnen helpen, zijn er al",
       "format": "1:1",
       "brand": "VSO Nederland",
-      "primaryText": "De school in Nuwakot is weggevaagd. Help kinderen terug in de klas met nieuwe schoolspullen.",
+      "primaryText": "De school in Nuwakot (Nepal) is weggevaagd. Help kinderen terug in de klas met nieuwe schoolspullen.",
       "headline": "Help kinderen terug naar school"
     },
     {
