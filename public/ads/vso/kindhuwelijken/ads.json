@@ -7,7 +7,7 @@
       "name": "“Ik was 12 toen ik moest trouwen.”",
       "format": "4:5",
       "brand": "VSO Nederland",
-      "primaryText": "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "primaryText": "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "headline": "Laat meisjes zelf kiezen"
     },
     {
@@ -16,7 +16,7 @@
       "name": "Rokeya mocht niet zelf kiezen. Jij kunt iets doen.",
       "format": "4:5",
       "brand": "VSO Nederland",
-      "primaryText": "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "primaryText": "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "headline": "Laat meisjes zelf kiezen"
     },
     {
@@ -25,7 +25,7 @@
       "name": "Elk meisje verdient een eigen keuze. Dus niet trouwen op je 12e",
       "format": "4:5",
       "brand": "VSO Nederland",
-      "primaryText": "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "primaryText": "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "headline": "Laat meisjes zelf kiezen"
     },
     {
@@ -34,7 +34,7 @@
       "name": "“Ik was 12 toen ik moest trouwen.”",
       "format": "9:16",
       "brand": "VSO Nederland",
-      "primaryText": "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "primaryText": "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "headline": "Laat meisjes zelf kiezen"
     },
     {
@@ -43,7 +43,7 @@
       "name": "Rokeya mocht niet zelf kiezen. Jij kunt iets doen.",
       "format": "9:16",
       "brand": "VSO Nederland",
-      "primaryText": "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "primaryText": "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "headline": "Laat meisjes zelf kiezen"
     },
     {
@@ -52,7 +52,7 @@
       "name": "Elk meisje verdient een eigen keuze. Dus niet trouwen op je 12e",
       "format": "9:16",
       "brand": "VSO Nederland",
-      "primaryText": "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "primaryText": "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "headline": "Laat meisjes zelf kiezen"
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "id": "vso-kindhuwelijken-vso_kh_05_annona_moest-feed-portrait",
-      "file": "VSO_kh_05_annona_moest-feed-portrait.jpg",
+      "file": "VSO_kh_05_annona_moest-feed-portrait-v2.jpg",
       "name": "“Ik wilde niet trouwen. Maar het moest.”",
       "format": "4:5",
       "brand": "VSO Nederland",
@@ -84,7 +84,7 @@
     },
     {
       "id": "vso-kindhuwelijken-vso_kh_04_annona_zeventien-story",
-      "file": "VSO_kh_04_annona_zeventien-story.jpg",
+      "file": "VSO_kh_04_annona_zeventien-story-v2.jpg",
       "name": "“Ik was 17. Ik kende hem niet.”",
       "format": "9:16",
       "brand": "VSO Nederland",
@@ -93,7 +93,7 @@
     },
     {
       "id": "vso-kindhuwelijken-vso_kh_05_annona_moest-story",
-      "file": "VSO_kh_05_annona_moest-story.jpg",
+      "file": "VSO_kh_05_annona_moest-story-v2.jpg",
       "name": "“Ik wilde niet trouwen. Maar het moest.”",
       "format": "9:16",
       "brand": "VSO Nederland",
@@ -172,7 +172,7 @@
     "primaryTexts": [
       "Maliha kan niet slapen van de angst. Morgen kan ze worden uitgehuwelijkt. Laat je stem horen en zet je naam erbij.",
       "“Ik kende hem niet. Toch werd er over mijn toekomst beslist.” Annona was 17. Teken mee, tegen kindhuwelijken.",
-      "Meisjes willen zelf beslissen over hun leven. Met jouw naam sta je naast hen. Doe je mee?",
+      "Meisjes willen zelf beslissen of, wanneer en met wie ze trouwen. Met jouw naam sta je naast hen. Doe je mee?",
       "VSO werkt met meisjes, ouders en scholen om kindhuwelijken te voorkomen. Steun dat werk en zet je naam eronder.",
       "Tekenen kost je een minuut. Voor een meisje kan het het verschil maken tussen trouwen en naar school gaan."
     ],
