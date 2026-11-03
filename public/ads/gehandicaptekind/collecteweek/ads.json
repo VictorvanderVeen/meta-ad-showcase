@@ -4,7 +4,7 @@
   "ads": [
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v01_aanbellen-staand",
-      "file": "NSGK_coll_V01_aanbellen_staand.jpg",
+      "file": "NSGK_coll_V01_aanbellen_staand_def.jpg",
       "name": "Vooraf · V01 Straks bel ik aan! — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -14,7 +14,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v01_aanbellen-vierkant",
-      "file": "NSGK_coll_V01_aanbellen_vierkant.jpg",
+      "file": "NSGK_coll_V01_aanbellen_vierkant_def.jpg",
       "name": "Vooraf · V01 Straks bel ik aan! — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -24,7 +24,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v01_aanbellen-story",
-      "file": "NSGK_coll_V01_aanbellen_story.jpg",
+      "file": "NSGK_coll_V01_aanbellen_story_def.jpg",
       "name": "Vooraf · V01 Straks bel ik aan! — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -34,7 +34,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v02_ver-staand",
-      "file": "NSGK_coll_V02_ver_staand.jpg",
+      "file": "NSGK_coll_V02_ver_staand_def.jpg",
       "name": "Vooraf · V02 Elke dag ver naar school? — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -44,7 +44,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v02_ver-vierkant",
-      "file": "NSGK_coll_V02_ver_vierkant.jpg",
+      "file": "NSGK_coll_V02_ver_vierkant_def.jpg",
       "name": "Vooraf · V02 Elke dag ver naar school? — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -54,7 +54,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v02_ver-story",
-      "file": "NSGK_coll_V02_ver_story.jpg",
+      "file": "NSGK_coll_V02_ver_story_def.jpg",
       "name": "Vooraf · V02 Elke dag ver naar school? — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -64,7 +64,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v03_klaarleggen-staand",
-      "file": "NSGK_coll_V03_klaarleggen_staand.jpg",
+      "file": "NSGK_coll_V03_klaarleggen_staand_def.jpg",
       "name": "Vooraf · V03 Leg alvast iets klaar — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -74,7 +74,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v03_klaarleggen-vierkant",
-      "file": "NSGK_coll_V03_klaarleggen_vierkant.jpg",
+      "file": "NSGK_coll_V03_klaarleggen_vierkant_def.jpg",
       "name": "Vooraf · V03 Leg alvast iets klaar — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -84,7 +84,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v03_klaarleggen-story",
-      "file": "NSGK_coll_V03_klaarleggen_story.jpg",
+      "file": "NSGK_coll_V03_klaarleggen_story_def.jpg",
       "name": "Vooraf · V03 Leg alvast iets klaar — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -94,7 +94,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v04_buurtgenoot-staand",
-      "file": "NSGK_coll_V04_buurtgenoot_staand.jpg",
+      "file": "NSGK_coll_V04_buurtgenoot_staand_def.jpg",
       "name": "Vooraf · V04 Er belt iemand aan — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -104,7 +104,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v04_buurtgenoot-vierkant",
-      "file": "NSGK_coll_V04_buurtgenoot_vierkant.jpg",
+      "file": "NSGK_coll_V04_buurtgenoot_vierkant_def.jpg",
       "name": "Vooraf · V04 Er belt iemand aan — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -114,7 +114,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_v04_buurtgenoot-story",
-      "file": "NSGK_coll_V04_buurtgenoot_story.jpg",
+      "file": "NSGK_coll_V04_buurtgenoot_story_def.jpg",
       "name": "Vooraf · V04 Er belt iemand aan — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -124,7 +124,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t01_deze_week-staand",
-      "file": "NSGK_coll_T01_deze_week_staand.jpg",
+      "file": "NSGK_coll_T01_deze_week_staand_def.jpg",
       "name": "Tijdens · T01 Deze week aan de deur — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -134,7 +134,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t01_deze_week-vierkant",
-      "file": "NSGK_coll_T01_deze_week_vierkant.jpg",
+      "file": "NSGK_coll_T01_deze_week_vierkant_def.jpg",
       "name": "Tijdens · T01 Deze week aan de deur — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -144,7 +144,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t01_deze_week-story",
-      "file": "NSGK_coll_T01_deze_week_story.jpg",
+      "file": "NSGK_coll_T01_deze_week_story_def.jpg",
       "name": "Tijdens · T01 Deze week aan de deur — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -154,7 +154,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t02_qr-staand",
-      "file": "NSGK_coll_T02_qr_staand.jpg",
+      "file": "NSGK_coll_T02_qr_staand_def.jpg",
       "name": "Tijdens · T02 Geen kleingeld in huis? — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -164,7 +164,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t02_qr-vierkant",
-      "file": "NSGK_coll_T02_qr_vierkant.jpg",
+      "file": "NSGK_coll_T02_qr_vierkant_def.jpg",
       "name": "Tijdens · T02 Geen kleingeld in huis? — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -174,7 +174,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t02_qr-story",
-      "file": "NSGK_coll_T02_qr_story.jpg",
+      "file": "NSGK_coll_T02_qr_story_def.jpg",
       "name": "Tijdens · T02 Geen kleingeld in huis? — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -184,7 +184,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t03_munt-staand",
-      "file": "NSGK_coll_T03_munt_staand.jpg",
+      "file": "NSGK_coll_T03_munt_staand_def.jpg",
       "name": "Tijdens · T03 Elke munt telt — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -194,7 +194,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t03_munt-vierkant",
-      "file": "NSGK_coll_T03_munt_vierkant.jpg",
+      "file": "NSGK_coll_T03_munt_vierkant_def.jpg",
       "name": "Tijdens · T03 Elke munt telt — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -204,7 +204,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t03_munt-story",
-      "file": "NSGK_coll_T03_munt_story.jpg",
+      "file": "NSGK_coll_T03_munt_story_def.jpg",
       "name": "Tijdens · T03 Elke munt telt — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -214,7 +214,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t04_wie_belt-staand",
-      "file": "NSGK_coll_T04_wie_belt_staand.jpg",
+      "file": "NSGK_coll_T04_wie_belt_staand_def.jpg",
       "name": "Tijdens · T04 Wie belt daar? — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -224,7 +224,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t04_wie_belt-vierkant",
-      "file": "NSGK_coll_T04_wie_belt_vierkant.jpg",
+      "file": "NSGK_coll_T04_wie_belt_vierkant_def.jpg",
       "name": "Tijdens · T04 Wie belt daar? — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -234,7 +234,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_t04_wie_belt-story",
-      "file": "NSGK_coll_T04_wie_belt_story.jpg",
+      "file": "NSGK_coll_T04_wie_belt_story_def.jpg",
       "name": "Tijdens · T04 Wie belt daar? — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -244,7 +244,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n01_gemist-staand",
-      "file": "NSGK_coll_N01_gemist_staand.jpg",
+      "file": "NSGK_coll_N01_gemist_staand_def.jpg",
       "name": "Na · N01 Collectant gemist? — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -254,7 +254,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n01_gemist-vierkant",
-      "file": "NSGK_coll_N01_gemist_vierkant.jpg",
+      "file": "NSGK_coll_N01_gemist_vierkant_def.jpg",
       "name": "Na · N01 Collectant gemist? — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -264,7 +264,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n01_gemist-story",
-      "file": "NSGK_coll_N01_gemist_story.jpg",
+      "file": "NSGK_coll_N01_gemist_story_def.jpg",
       "name": "Na · N01 Collectant gemist? — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -274,7 +274,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n02_niet_thuis-staand",
-      "file": "NSGK_coll_N02_niet_thuis_staand.jpg",
+      "file": "NSGK_coll_N02_niet_thuis_staand_def.jpg",
       "name": "Na · N02 Niet thuis? — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -284,7 +284,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n02_niet_thuis-vierkant",
-      "file": "NSGK_coll_N02_niet_thuis_vierkant.jpg",
+      "file": "NSGK_coll_N02_niet_thuis_vierkant_def.jpg",
       "name": "Na · N02 Niet thuis? — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -294,7 +294,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n02_niet_thuis-story",
-      "file": "NSGK_coll_N02_niet_thuis_story.jpg",
+      "file": "NSGK_coll_N02_niet_thuis_story_def.jpg",
       "name": "Na · N02 Niet thuis? — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -304,7 +304,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n03_bus_weg-staand",
-      "file": "NSGK_coll_N03_bus_weg_staand.jpg",
+      "file": "NSGK_coll_N03_bus_weg_staand_def.jpg",
       "name": "Na · N03 De bus is al weg — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -314,7 +314,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n03_bus_weg-vierkant",
-      "file": "NSGK_coll_N03_bus_weg_vierkant.jpg",
+      "file": "NSGK_coll_N03_bus_weg_vierkant_def.jpg",
       "name": "Na · N03 De bus is al weg — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -324,7 +324,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n03_bus_weg-story",
-      "file": "NSGK_coll_N03_bus_weg_story.jpg",
+      "file": "NSGK_coll_N03_bus_weg_story_def.jpg",
       "name": "Na · N03 De bus is al weg — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
@@ -334,7 +334,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n04_terugblik-staand",
-      "file": "NSGK_coll_N04_terugblik_staand.jpg",
+      "file": "NSGK_coll_N04_terugblik_staand_def.jpg",
       "name": "Na · N04 Dichtbij huis naar school? — staand",
       "format": "4:5",
       "brand": "Het Gehandicapte Kind",
@@ -344,7 +344,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n04_terugblik-vierkant",
-      "file": "NSGK_coll_N04_terugblik_vierkant.jpg",
+      "file": "NSGK_coll_N04_terugblik_vierkant_def.jpg",
       "name": "Na · N04 Dichtbij huis naar school? — vierkant",
       "format": "1:1",
       "brand": "Het Gehandicapte Kind",
@@ -354,7 +354,7 @@
     },
     {
       "id": "gehandicaptekind-collecteweek-nsgk_coll_n04_terugblik-story",
-      "file": "NSGK_coll_N04_terugblik_story.jpg",
+      "file": "NSGK_coll_N04_terugblik_story_def.jpg",
       "name": "Na · N04 Dichtbij huis naar school? — story",
       "format": "9:16",
       "brand": "Het Gehandicapte Kind",
