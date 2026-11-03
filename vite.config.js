@@ -85,9 +85,80 @@ function clientPages() {
   }
 }
 
+// Victor's own overview of every client and campaign, for his bookmarks.
+// Deliberately not at the site root: clients see that link, and must not see
+// each other's campaigns. The random suffix keeps the page unguessable, and
+// noindex keeps it out of search engines.
+const OVERVIEW_PATH = 'overzicht-840415de'
+
+function readJson(file) {
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf8'))
+  } catch {
+    return null
+  }
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
+}
+
+function overviewPage() {
+  return {
+    name: 'overview-page',
+    apply: 'build',
+    closeBundle() {
+      const fmt = new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'short', year: 'numeric' })
+      const sections = clients()
+        .map((client) => {
+          const dir = path.join(adsDir, client.slug)
+          const listing = readJson(path.join(dir, 'campaigns.json'))
+          const legacy = client.legacy ? readJson(path.join(dir, 'ads.json')) : null
+          const name = listing?.client || legacy?.client || client.slug
+          const listed = new Map((listing?.campaigns || []).map((c) => [c.slug, c]))
+          const rows = client.campaigns
+            .map((slug) => {
+              const meta = listed.get(slug)
+              const ads = readJson(path.join(dir, slug, 'ads.json'))?.ads?.length ?? 0
+              return { href: `../${client.slug}/${slug}/`, label: meta?.name || slug, ads, updatedAt: meta?.updatedAt }
+            })
+            .sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''))
+          if (client.legacy) {
+            rows.push({ href: `../${client.slug}/`, label: client.campaigns.length ? 'Oudere losse set' : 'Advertenties', ads: legacy?.ads?.length ?? 0 })
+          }
+          const items = rows
+            .map(
+              (r) =>
+                `<li><a href="${r.href}">${escapeHtml(r.label)}</a><span>${r.ads} ads${r.updatedAt ? ` · ${fmt.format(new Date(r.updatedAt))}` : ''}</span></li>`
+            )
+            .join('')
+          return `<section><h2><a href="../${client.slug}/">${escapeHtml(name)}</a></h2><ul>${items}</ul></section>`
+        })
+        .join('\n')
+      const html = `<!doctype html>
+<html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Showcase — alle klanten</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;background:#f4f5f7;color:#212121;margin:0;padding:40px 20px}
+main{max-width:760px;margin:0 auto}h1{font-size:28px;margin:0 0 24px}
+section{background:#fff;border-radius:12px;padding:18px 22px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+h2{font-size:19px;margin:0 0 8px}h2 a{color:#212121;text-decoration:none}h2 a:hover{color:#ef3713}
+ul{list-style:none;margin:0;padding:0}li{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-top:1px solid #eee}
+li a{color:#ef3713;text-decoration:none;font-weight:600}li a:hover{text-decoration:underline}li span{color:#777;font-size:14px;white-space:nowrap}
+</style></head><body><main><h1>Showcase — alle klanten</h1>
+${sections}
+</main></body></html>
+`
+      const outDir = path.join(rootDir, 'dist', OVERVIEW_PATH)
+      fs.mkdirSync(outDir, { recursive: true })
+      fs.writeFileSync(path.join(outDir, 'index.html'), html)
+    },
+  }
+}
+
 // Relative base so the build works both locally and on GitHub Pages
 // (project site served from /meta-ad-showcase/).
 export default defineConfig({
   base: './',
-  plugins: [react(), clientPages()],
+  plugins: [react(), clientPages(), overviewPage()],
 })
