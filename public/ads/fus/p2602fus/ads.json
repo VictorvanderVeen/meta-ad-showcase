@@ -6,13 +6,13 @@
     "domain": "forskautandjurforsok.se",
     "cta": "Mer information",
     "primaryTexts": [
-      "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
-      "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
-      "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige."
+      "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
+      "Håll utkik i brevlådan. Och bidra till forskningen om cancer, hjärtsjukdom och andra allvarliga sjukdomar i Sverige.",
+      "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige."
     ],
     "headlines": [
-      "Klicka för att stärka forskningen",
-      "Läs mer om hur du kan stärka forskningen"
+      "Klicka för att hjälpa forskningen framåt.",
+      "Läs mer om hur du kan hjälpa till att stärka forskningen."
     ],
     "descriptions": []
   },
@@ -23,8 +23,8 @@
       "name": "A · Nästa genombrott kan börja med dig (video) — vierkant",
       "format": "1:1",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
-      "headline": "Klicka för att stärka forskningen"
+      "primaryText": "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
+      "headline": "Klicka för att hjälpa forskningen framåt."
     },
     {
       "id": "fus-p2602fus-a-staand",
@@ -32,8 +32,8 @@
       "name": "A · Nästa genombrott kan börja med dig (video) — staand",
       "format": "9:16",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
-      "headline": "Klicka för att stärka forskningen"
+      "primaryText": "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
+      "headline": "Klicka för att hjälpa forskningen framåt."
     },
     {
       "id": "fus-p2602fus-a-liggend",
@@ -41,8 +41,8 @@
       "name": "A · Nästa genombrott kan börja med dig (video) — liggend",
       "format": "16:9",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
-      "headline": "Klicka för att stärka forskningen"
+      "primaryText": "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige. Det ger forskarna bättre möjlighet att utveckla nya behandlingar för dina nära och kära.",
+      "headline": "Klicka för att hjälpa forskningen framåt."
     },
     {
       "id": "fus-p2602fus-b",
@@ -50,8 +50,8 @@
       "name": "B · Håll utkik i brevlådan — vierkant",
       "format": "1:1",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
-      "headline": "Klicka för att stärka forskningen"
+      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer, hjärtsjukdom och andra allvarliga sjukdomar i Sverige.",
+      "headline": "Klicka för att hjälpa forskningen framåt."
     },
     {
       "id": "fus-p2602fus-b-staand",
@@ -59,8 +59,8 @@
       "name": "B · Håll utkik i brevlådan — staand",
       "format": "9:16",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
-      "headline": "Klicka för att stärka forskningen"
+      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer, hjärtsjukdom och andra allvarliga sjukdomar i Sverige.",
+      "headline": "Klicka för att hjälpa forskningen framåt."
     },
     {
       "id": "fus-p2602fus-b-liggend",
@@ -68,8 +68,8 @@
       "name": "B · Håll utkik i brevlådan — liggend",
       "format": "16:9",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer och hjärtsjukdom i Sverige.",
-      "headline": "Klicka för att stärka forskningen"
+      "primaryText": "Håll utkik i brevlådan. Och bidra till forskningen om cancer, hjärtsjukdom och andra allvarliga sjukdomar i Sverige.",
+      "headline": "Klicka för att hjälpa forskningen framåt."
     },
     {
       "id": "fus-p2602fus-c",
@@ -77,8 +77,8 @@
       "name": "C · Insamling för svensk forskning 2026 — vierkant",
       "format": "1:1",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige.",
-      "headline": "Läs mer om hur du kan stärka forskningen"
+      "primaryText": "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige.",
+      "headline": "Läs mer om hur du kan hjälpa till att stärka forskningen."
     },
     {
       "id": "fus-p2602fus-c-staand",
@@ -86,8 +86,8 @@
       "name": "C · Insamling för svensk forskning 2026 — staand",
       "format": "9:16",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige.",
-      "headline": "Läs mer om hur du kan stärka forskningen"
+      "primaryText": "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige.",
+      "headline": "Läs mer om hur du kan hjälpa till att stärka forskningen."
     },
     {
       "id": "fus-p2602fus-c-liggend",
@@ -95,8 +95,8 @@
       "name": "C · Insamling för svensk forskning 2026 — liggend",
       "format": "16:9",
       "brand": "Forska Utan Djurförsök",
-      "primaryText": "Var med och finansiera framtidens forskning om cancer och hjärtsjukdomar i Sverige.",
-      "headline": "Läs mer om hur du kan stärka forskningen"
+      "primaryText": "Var med och finansiera framtidens forskning om cancer, hjärtsjukdomar och andra allvarliga sjukdomar i Sverige.",
+      "headline": "Läs mer om hur du kan hjälpa till att stärka forskningen."
     }
   ]
 }
