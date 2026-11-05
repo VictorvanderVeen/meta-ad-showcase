@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { t } from '../lib/i18n';
 import AdMedia from './AdMedia';
+import { adImageUrl } from '../lib/ads';
 
 // Facebook cuts a long primary text off and shows "See more".
 const COLLAPSE_AT = 160;
@@ -38,9 +39,13 @@ export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, hea
   return (
     <div className="feed-ad">
       <div className="feed-header">
-        <div className="feed-avatar" style={{ background: copy.color || '#65676b' }}>
-          {(pageName || '?').trim().charAt(0).toUpperCase()}
-        </div>
+        {copy.avatar ? (
+          <img className="feed-avatar feed-avatar-img" src={adImageUrl(copy.avatar)} alt="" />
+        ) : (
+          <div className="feed-avatar" style={{ background: copy.color || '#65676b' }}>
+            {(pageName || '?').trim().charAt(0).toUpperCase()}
+          </div>
+        )}
         <div className="feed-header-text">
           <span className="feed-page-name">{pageName}</span>
           <span className="feed-sponsored">{t('fbSponsored')}</span>

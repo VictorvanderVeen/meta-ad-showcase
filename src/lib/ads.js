@@ -26,7 +26,8 @@
  * With it, every ad is shown as a Facebook feed ad and the texts get their
  * own decisions.
  *
- *   { "pageName", "color", "domain", "cta",
+ *   { "pageName", "color", "domain", "cta", "avatar" (optional, file in the
+ *     same folder as the images; otherwise the page initial on `color`),
  *     "primaryTexts": [], "headlines": [], "descriptions": [] }
  *
  * `file` is relative to the client/campaign folder. `id` must be stable —
