@@ -37,7 +37,7 @@ export default function FeedAd({ imageUrl, alt, copy, pageName, primaryText, hea
   const cta = ownCta || copy.cta;
 
   return (
-    <div className="feed-ad">
+    <div className="feed-post">
       <div className="feed-header">
         {copy.avatar ? (
           <img className="feed-avatar feed-avatar-img" src={adImageUrl(copy.avatar)} alt="" />

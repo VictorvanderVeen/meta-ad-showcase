@@ -1,7 +1,7 @@
 # Plan: showcase-ads van GitHub naar PocketBase
 
 Stand: 6-11-2026. Stap 1–5 gebouwd en lokaal getest (PocketBase 0.40.4): import 198/198 ads byte-gelijk, alle linkvormen, video, talen, conceptvlag.
-Live sinds 6-11: server, import (198/198 byte-gelijk op productie), Pages verwijst door. Nog te doen: stap 6 (creator) en 7 (opruimen).
+Live sinds 6-11: server, import (198/198 byte-gelijk op productie), Pages verwijst door. Stap 6 (creator) gebouwd en getest 6-11 (endpoints tegen productie, testklant weer verwijderd; knop in de browser nog niet doorgeklikt). Nog te doen: stap 7 (opruimen).
 
 **Beslissingen 6-11:** app op db.vdveen.online/showcase/ · teksten als losse velden (bewerkbaar in dashboard) · geen historie-hook, periodieke export volstaat · Levon-beelden terug op te beoordelen (gedaan, teksten blijven goedgekeurd).
 
@@ -48,7 +48,7 @@ Beslissing nodig (zie open vragen). Aanbevolen: **de app zelf ook op db.vdveen.o
 3. **App ombouwen**: `src/lib/ads.js` haalt uit PocketBase in plaats van uit `public/ads`. Behoud dezelfde vorm van het object dat de rest van de app krijgt, dan hoeven `App.jsx`, `AdCard`, `FeedAd` en `CampaignList` niet of nauwelijks te veranderen. `adUrl()` geeft de PocketBase-file-URL.
 4. **Overzichtspagina**: `overviewPage()` wordt een runtime-pagina die de lijst uit PocketBase haalt (blijft op het geheime pad, `noindex`).
 5. **Hosting** volgens de gekozen optie (Caddy-blok + SPA-fallback, of Pages houden).
-6. **Creator-knoppen**: "Zet in showcase" schrijft via de PocketBase-API in plaats van naar de repo. "Live zetten" vervalt, want wegschrijven is direct live. Een concept-vlag (`actief = false`) vervangt het oude "eerst lokaal, dan live".
+6. **Creator-knoppen** (gedaan): "Zet in showcase" schrijft via de dev-server (`meta-ad-creator/showcase-pocketbase.js`, superuser uit `.env.local`) rechtstreeks in PocketBase, upsert op `item_id`, beeld alleen opnieuw omhoog als de hash verandert. Nieuwe campagne krijgt `in_lijst = uit`: werkt via de eigen link, staat niet in de klantlijst. "Live zetten" is vervangen door "Zet in klantlijst" (`in_lijst = aan`). Een losse set naast bestaande campagnes wordt geweigerd (409).
 7. **Opruimen** pas als alles live werkt en vergeleken is: `public/ads/` uit de repo (blijft in de git-geschiedenis), `apps-script/` (dood spoor) erbij.
 
 ## Controle vóór "klaar"

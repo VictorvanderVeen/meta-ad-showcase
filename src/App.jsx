@@ -159,7 +159,7 @@ export default function App() {
             onExport={handleExport}
             onReset={handleReset}
           />
-          <main className="ad-grid" ref={gridRef}>
+          <main className="item-grid" ref={gridRef}>
             {visibleAds.map((ad) => (
               <AdCard
                 key={ad.id}

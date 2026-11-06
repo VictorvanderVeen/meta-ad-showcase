@@ -15,7 +15,7 @@ export default function DecisionControls({ id, decision, placeholder, onSetStatu
 
   return (
     <>
-      <div className="ad-card-actions">
+      <div className="item-card-actions">
         <button
           type="button"
           className={`btn-approve ${status === 'approved' ? 'active' : ''}`}
@@ -51,7 +51,7 @@ export default function DecisionControls({ id, decision, placeholder, onSetStatu
 
       {showComment && (
         <textarea
-          className="ad-card-comment"
+          className="item-card-comment"
           placeholder={placeholder}
           value={decision.comment || ''}
           onChange={(e) => onSetComment(id, e.target.value)}

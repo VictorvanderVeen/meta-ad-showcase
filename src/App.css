@@ -166,7 +166,7 @@ code {
 .btn-reset:hover { background: #f3f4f6; }
 
 /* ── Ad grid ── */
-.ad-grid {
+.item-grid {
   /* stay clear of the sticky summary bar when scrolled to */
   scroll-margin-top: 140px;
   display: grid;
@@ -175,7 +175,7 @@ code {
   gap: 20px;
 }
 
-.ad-card {
+.item-card {
   background: #fff;
   border: 2px solid #e5e7eb;
   border-radius: 14px;
@@ -184,10 +184,10 @@ code {
   flex-direction: column;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
-.ad-card.status-approved { border-color: #34c759; }
-.ad-card.status-rejected { border-color: #ff3b30; }
+.item-card.status-approved { border-color: #34c759; }
+.item-card.status-rejected { border-color: #ff3b30; }
 
-.ad-card-media {
+.item-card-media {
   position: relative;
   background: #f1f3f5;
   display: flex;
@@ -196,8 +196,8 @@ code {
   min-height: 200px;
 }
 
-.ad-card-media img,
-.ad-card-media video {
+.item-card-media img,
+.item-card-media video {
   width: 100%;
   height: auto;
   display: block;
@@ -217,20 +217,20 @@ code {
 .pill-rejected { color: #b3261e; }
 .pill-pending { color: #a35a00; }
 
-.ad-card-body {
+.item-card-body {
   padding: 14px 16px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.ad-card-name {
+.item-card-name {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
 }
 
-.ad-card-meta {
+.item-card-meta {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
@@ -244,7 +244,7 @@ code {
   border-radius: 6px;
 }
 
-.ad-card-actions {
+.item-card-actions {
   display: flex;
   gap: 8px;
 }
@@ -286,7 +286,7 @@ code {
 .btn-comment.active { background: #f3f4f6; border-color: #9ca3af; }
 .btn-comment:disabled { cursor: default; }
 
-.ad-card-comment {
+.item-card-comment {
   width: 100%;
   resize: vertical;
   padding: 8px 10px;
@@ -295,13 +295,13 @@ code {
   font-size: 14px;
   font-family: inherit;
 }
-.ad-card-comment:focus {
+.item-card-comment:focus {
   outline: none;
   border-color: #1a1a1a;
 }
 
 /* ── Facebook feed ad ── */
-.feed-ad {
+.feed-post {
   width: 100%;
   background: #fff;
   font-family: Helvetica, Arial, sans-serif;

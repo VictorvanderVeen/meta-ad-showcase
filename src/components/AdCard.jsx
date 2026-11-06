@@ -8,8 +8,8 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
   const status = decision.status || 'pending';
 
   return (
-    <div className={`ad-card status-${status}`}>
-      <div className="ad-card-media">
+    <div className={`item-card status-${status}`}>
+      <div className="item-card-media">
         {copy ? (
           <FeedAd
             imageUrl={adImageUrl(ad.file)}
@@ -27,9 +27,9 @@ export default function AdCard({ ad, copy, primaryText, headline, decision, onSe
         <span className={`status-pill pill-${status}`}>{t(status)}</span>
       </div>
 
-      <div className="ad-card-body">
-        <h3 className="ad-card-name">{ad.name}</h3>
-        <div className="ad-card-meta">
+      <div className="item-card-body">
+        <h3 className="item-card-name">{ad.name}</h3>
+        <div className="item-card-meta">
           {ad.brand && <span className="meta-tag">{ad.brand}</span>}
           {ad.format && <span className="meta-tag">{ad.format}</span>}
         </div>
