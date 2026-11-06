@@ -36,12 +36,12 @@ Een wijziging in het dashboard is na herladen meteen live, zonder git of deploy.
 - De oude links op GitHub Pages (`…github.io/meta-ad-showcase/…`) sturen door naar hetzelfde pad
   op db.vdveen.online (`pages-redirect/`).
 
+Nieuwe ads komen via de knop "Zet in showcase" in meta-ad-creator. De oude map `public/ads`,
+het importscript en het vergelijkscript zijn op 6-11-2026 weggehaald (staan in de git-geschiedenis,
+commit 7edb8c8).
+
 ## Scripts
 ```bash
-# public/ads → PocketBase (idempotent; ook voor één klant of klant/campagne)
-node --env-file=../me-timer/.env.migratie.local scripts/import-ads-naar-pocketbase.mjs [klant[/campagne]]
-# controle: PocketBase tegen public/ads, teksten én beelden
-node scripts/vergelijk-met-pocketbase.mjs
 # app, migratie en mailhook naar de server (alleen bij codewijzigingen)
 ./pocketbase/app-naar-server.sh
 ```

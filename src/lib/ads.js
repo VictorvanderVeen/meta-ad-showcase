@@ -15,7 +15,7 @@
  * as its records do.
  *
  * The rest of the app gets the same shapes it got when the ads still lived in
- * public/ads/<klant>/ads.json:
+ * public/ads/<klant>/ads.json (until November 2026):
  *
  *   ad:    { id, file, name, format, brand, primaryText?, headline?, description?, cta? }
  *          `id` is the record's item_id: decisions are keyed on it, so it never changes.

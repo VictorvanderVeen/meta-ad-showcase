@@ -13,8 +13,6 @@ PB=/opt/pocketbase
 WEB=/var/www/showcase
 
 npm run build >/dev/null
-# public/ads zit nog in de repo zolang de oude bestanden er staan; de app haalt alles uit PocketBase
-rm -rf dist/ads
 
 PAKKET=$(cd pocketbase && COPYFILE_DISABLE=1 tar -czf - pb_hooks/showcase_melding.pb.js pb_migrations/1793200000_showcase_ads.js | base64)
 APP=$(cd dist && COPYFILE_DISABLE=1 tar -czf - . | base64)

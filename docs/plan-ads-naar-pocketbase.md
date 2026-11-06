@@ -1,7 +1,7 @@
 # Plan: showcase-ads van GitHub naar PocketBase
 
 Stand: 6-11-2026. Stap 1–5 gebouwd en lokaal getest (PocketBase 0.40.4): import 198/198 ads byte-gelijk, alle linkvormen, video, talen, conceptvlag.
-Live sinds 6-11: server, import (198/198 byte-gelijk op productie), Pages verwijst door. Stap 6 (creator) gebouwd en getest 6-11 (endpoints tegen productie, testklant weer verwijderd; knop in de browser nog niet doorgeklikt). Nog te doen: stap 7 (opruimen).
+Live sinds 6-11: server, import (198/198 byte-gelijk op productie), Pages verwijst door. Stap 6 (creator) gebouwd en getest 6-11 (endpoints tegen productie, testklant weer verwijderd; knop in de browser nog niet doorgeklikt). Stap 7 gedaan 6-11: laatste vergelijking 17/17 sets gelijk, daarna opgeruimd. Plan afgerond.
 
 **Beslissingen 6-11:** app op db.vdveen.online/showcase/ · teksten als losse velden (bewerkbaar in dashboard) · geen historie-hook, periodieke export volstaat · Levon-beelden terug op te beoordelen (gedaan, teksten blijven goedgekeurd).
 
