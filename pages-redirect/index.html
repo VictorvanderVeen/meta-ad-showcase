@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Meta Ad Showcase is verhuisd</title>
+<script>
+  // De showcase staat sinds november 2026 op db.vdveen.online/showcase/. Oude links
+  // (…/meta-ad-showcase/<klant>/<campagne>/) gaan naar hetzelfde pad daar.
+  // GitHub Pages toont dit bestand ook als 404.html, dus elke oude link komt hier langs.
+  var pad = location.pathname.replace(/^\/meta-ad-showcase\/?/, '').replace(/index\.html$/, '');
+  location.replace('https://db.vdveen.online/showcase/' + pad + location.search + location.hash);
+</script>
+</head>
+<body style="font-family:system-ui,sans-serif;padding:40px">
+<p>De showcase is verhuisd naar <a href="https://db.vdveen.online/showcase/">db.vdveen.online/showcase</a>.</p>
+</body>
+</html>

@@ -1,142 +1,162 @@
 /**
- * Loads the ad manifest for the current link. Every client has its own
- * folder and its own link:
+ * Loads the ads for the current link from PocketBase (collections
+ * adshowcase_klanten, adshowcase_campagnes and adshowcase_ads, see
+ * pocketbase/pb_migrations/1793200000_showcase_ads.js). Every client has its
+ * own link, and every campaign its own link below it:
  *
- *   public/ads/<klant>/ads.json              →  …/meta-ad-showcase/<klant>/
- *   public/ads/<klant>/<campagne>/ads.json   →  …/meta-ad-showcase/<klant>/<campagne>/
+ *   <base>/<klant>/              the client's loose set (campaign with an empty slug),
+ *                                or else the list of its campaigns (in_lijst = on)
+ *   <base>/<klant>/<campagne>/   one campaign
+ *   <base>/                      the default client, see DEFAULT_CLIENT
  *
- *   ads.json:        { "client": "Naam", "ads": [ { "id", "file", "name", "format", "brand" }, ... ], "copy": {...} }
- *                    An ad may carry its own "primaryText", "headline" and "description": that ad then
- *                    always shows them in its Facebook card (e.g. campaigns with phases, each with its own copy).
- *   campaigns.json:  { "client": "Naam", "campaigns": [ { "slug", "name", "updatedAt" }, ... ] }
+ * <base> is Vite's BASE_URL (vite.config.js), the fixed path the app is
+ * hosted at. Since it's fixed, everything after it is the app's own routing,
+ * so a new client or campaign needs no rebuild or deploy: it exists as soon
+ * as its records do.
  *
- *   Both may carry "lang" ("nl", "en", "de", "sv") for the interface language, see lib/i18n.js.
- *   A campaign without its own "lang" takes the one from its client's campaigns.json,
- *   so new campaigns from the creator follow the client's language automatically.
+ * The rest of the app gets the same shapes it got when the ads still lived in
+ * public/ads/<klant>/ads.json:
  *
- * A client is either a single campaign (ads.json directly in its folder —
- * the shape before campaigns existed) or an archive of campaigns (a
- * campaigns.json listing plus one subfolder per campaign, each with its own
- * ads.json). Which shape a client has isn't decided by a build-time list:
- * the app tries the most specific link first (`<klant>/<campagne>/ads.json`)
- * and falls back to the archive listing, so a campaign folder added by the
- * creator works immediately, with or without a rebuild.
+ *   ad:    { id, file, name, format, brand, primaryText?, headline?, description?, cta? }
+ *          `id` is the record's item_id: decisions are keyed on it, so it never changes.
+ *          `file` is the full URL of the image or video.
+ *   copy:  { pageName, color, domain, cta, avatar?, primaryTexts, headlines, descriptions },
+ *          or null for a campaign without pagina_naam (plain images, no Facebook card).
  *
- * `copy` on ads.json is optional: the Meta copy that runs with the images.
- * With it, every ad is shown as a Facebook feed ad and the texts get their
- * own decisions.
- *
- *   { "pageName", "color", "domain", "cta", "avatar" (optional, file in the
- *     same folder as the images; otherwise the page initial on `color`),
- *     "primaryTexts": [], "headlines": [], "descriptions": [] }
- *
- * `file` is relative to the client/campaign folder. `id` must be stable —
- * decisions are keyed on it — and unique across clients and campaigns
- * (prefix it with the client slug, and the campaign slug when there is one).
+ * The interface language is the campaign's taal, or else its client's.
  */
 
 import { setLang, t } from './i18n';
 
 const SLUG_RE = /^[a-z0-9-]+$/;
 
-// The link without a client at the end predates the per-client folders and was
+// The link without a client at the end predates the per-client links and was
 // shared with Het Gehandicapte Kind, so it keeps showing their set.
 const DEFAULT_CLIENT = 'gehandicaptekind';
 
+// Victor's own overview of every client and campaign, for his bookmarks.
+// Deliberately not at the site root: clients see that link, and must not see
+// each other's campaigns. The random suffix keeps the path unguessable.
+export const OVERVIEW_SLUG = 'overzicht-840415de';
+
+const PB = (import.meta.env.VITE_POCKETBASE_URL || '').replace(/\/$/, '');
+const BASE = import.meta.env.BASE_URL; // always ends in '/'
+
 function resolveClient() {
-  const segments = window.location.pathname.split('/').filter(Boolean);
-  if (segments.at(-1) === 'index.html') segments.pop();
-
-  // A built page (vite.config.js's clientPages()) states exactly which
-  // client/campaign it is for, because a GitHub Pages project site is
-  // itself served from a path segment (…/meta-ad-showcase/<klant>/…) — the
-  // app can't tell that prefix apart from its own routing just by counting
-  // segments at runtime, "meta-ad-showcase" is as valid a slug as "hamlin"
-  // is. The dev server has no such prefix, so it keeps guessing from the URL.
-  const link = window.__SHOWCASE_LINK__;
-  let slug = DEFAULT_CLIENT;
-  let campaign = null;
-  let consumed = 0;
-
-  if (link) {
-    slug = link.slug;
-    campaign = link.campaign || null;
-    consumed = link.consumed;
-  } else if (import.meta.env.DEV) {
-    // A client/campaign link has two slug-shaped segments at the end; a
-    // client-only link (single campaign, or an archive's own index) has one.
-    if (segments.length >= 2 && SLUG_RE.test(segments.at(-2)) && SLUG_RE.test(segments.at(-1))) {
-      campaign = segments.at(-1);
-      slug = segments.at(-2);
-      consumed = 2;
-    } else if (SLUG_RE.test(segments.at(-1))) {
-      slug = segments.at(-1);
-      consumed = 1;
-    }
-  }
-
-  // Absolute path of the app root, so ad files resolve the same with or
-  // without the client/campaign segments (and with or without a trailing slash).
-  const rootSegments = consumed ? segments.slice(0, segments.length - consumed) : segments;
-  const root = rootSegments.length ? `/${rootSegments.join('/')}/` : '/';
-  return { slug, campaign, root };
+  const path = window.location.pathname;
+  const own = path.startsWith(BASE) ? path.slice(BASE.length) : '';
+  const segments = own.split('/').filter((s) => s && s !== 'index.html');
+  if (segments[0] === OVERVIEW_SLUG) return { overview: true, slug: '', campaign: null };
+  const [slug = DEFAULT_CLIENT, campaign = null] = segments.filter((s) => SLUG_RE.test(s));
+  return { overview: false, slug, campaign };
 }
 
 export const client = resolveClient();
 
 // client.slug, plus client.campaign when there is one: unique per link,
-// used to scope ad ids and the CSV export.
+// used to scope copy ids and the CSV export.
 const scopeSlug = client.campaign ? `${client.slug}-${client.campaign}` : client.slug;
 
-function scopeDir() {
-  return client.campaign ? `${client.slug}/${client.campaign}/` : `${client.slug}/`;
+const q = (value) => `"${String(value).replace(/"/g, '\\"')}"`;
+
+async function list(collection, params) {
+  const search = new URLSearchParams({ perPage: '500', skipTotal: '1', ...params });
+  const res = await fetch(`${PB}/api/collections/${collection}/records?${search}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`${collection}: ${res.status}`);
+  return (await res.json()).items;
+}
+
+function fileUrl(record, name) {
+  return name ? `${PB}/api/files/${record.collectionId}/${record.id}/${encodeURIComponent(name)}` : '';
+}
+
+async function findCampaign(slug) {
+  const [campaign] = await list('adshowcase_campagnes', {
+    filter: `klant.slug=${q(client.slug)} && slug=${q(slug)}`,
+    expand: 'klant',
+  });
+  return campaign || null;
 }
 
 /**
  * Loads the current link. Normally resolves to `{ kind: 'ads', ads, ... }`.
- * If the link names only a client and that client turns out to hold
- * campaigns rather than ads directly, resolves instead to
+ * If the link names only a client that has no loose set, resolves instead to
  * `{ kind: 'campaigns', campaigns, clientName }` so the app can show the
- * archive picker.
+ * campaign picker.
  */
 export async function loadAds() {
-  const data = await fetchJson(`${client.root}ads/${scopeDir()}ads.json`);
-  if (data) {
-    if (data.lang) setLang(data.lang);
-    else if (client.campaign) setLang((await fetchJson(`${client.root}ads/${client.slug}/campaigns.json`))?.lang);
-    const ads = Array.isArray(data.ads) ? data.ads : [];
-    const clientName = data.client || ads[0]?.brand || '';
-    return {
-      kind: 'ads',
-      ads,
-      clientName,
-      copy: data.copy || null,
-      copyGroups: copyGroups(data.copy, clientName),
-    };
+  const campaign = await findCampaign(client.campaign || '');
+  if (campaign) {
+    const klant = campaign.expand?.klant;
+    setLang(campaign.taal || klant?.taal);
+    const records = await list('adshowcase_ads', { filter: `campagne=${q(campaign.id)}`, sort: 'volgorde' });
+    const clientName = klant?.naam || '';
+    const ads = records.map((r) => ({
+      id: r.item_id,
+      file: fileUrl(r, r.beeld),
+      name: r.naam,
+      format: r.formaat,
+      brand: r.merk || clientName,
+      ...(r.primaire_tekst && { primaryText: r.primaire_tekst }),
+      ...(r.kop && { headline: r.kop }),
+      ...(r.beschrijving && { description: r.beschrijving }),
+      ...(r.cta && { cta: r.cta }),
+    }));
+    const copy = campaign.pagina_naam
+      ? {
+          pageName: campaign.pagina_naam,
+          color: campaign.kleur,
+          domain: campaign.domein,
+          cta: campaign.cta,
+          avatar: fileUrl(campaign, campaign.avatar),
+          primaryTexts: campaign.primaire_teksten || [],
+          headlines: campaign.koppen || [],
+          descriptions: campaign.beschrijvingen || [],
+        }
+      : null;
+    return { kind: 'ads', ads, clientName, copy, copyGroups: copyGroups(copy, clientName) };
   }
-  if (client.campaign) throw new Error('Kon ads.json niet laden');
+  if (client.campaign) throw new Error(t('notFound'));
 
-  // No campaign in the link and no ads.json directly in the client folder:
-  // this client is an archive of campaigns, so load its listing instead.
-  const list = await fetchJson(`${client.root}ads/${client.slug}/campaigns.json`);
-  if (!list) throw new Error('Kon ads.json niet laden');
-  setLang(list.lang);
-  const campaigns = Array.isArray(list.campaigns) ? list.campaigns : [];
+  // No campaign in the link and no loose set for this client: show its campaigns.
+  const [klant] = await list('adshowcase_klanten', { filter: `slug=${q(client.slug)}` });
+  if (!klant) throw new Error(t('notFound'));
+  setLang(klant.taal);
+  const campaigns = await list('adshowcase_campagnes', {
+    filter: `klant=${q(klant.id)} && in_lijst=true && slug!=""`,
+    sort: '-bijgewerkt',
+  });
   return {
     kind: 'campaigns',
-    clientName: list.client || '',
-    campaigns: [...campaigns].sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || '')),
+    clientName: klant.naam,
+    campaigns: campaigns.map((c) => ({ slug: c.slug, name: c.naam, updatedAt: c.bijgewerkt })),
   };
 }
 
-// A dev/preview static server falls back to index.html (status 200) for a
-// path that doesn't exist, so `res.ok` alone can't tell "missing" from
-// "found" — the content-type can. Treats anything that isn't real JSON as
-// not found, which is what both a true 404 and that HTML fallback mean here.
-async function fetchJson(url) {
-  const res = await fetch(url, { cache: 'no-store' });
-  if (!res.ok || !res.headers.get('content-type')?.includes('json')) return null;
-  return res.json();
+/** Every client with all its campaigns, for Victor's overview page. */
+export async function loadOverview() {
+  const [klanten, campagnes, ads] = await Promise.all([
+    list('adshowcase_klanten', { sort: 'naam' }),
+    list('adshowcase_campagnes', { sort: '-bijgewerkt' }),
+    list('adshowcase_ads', { fields: 'campagne', perPage: '1000' }),
+  ]);
+  const count = {};
+  for (const ad of ads) count[ad.campagne] = (count[ad.campagne] || 0) + 1;
+  return klanten
+    .map((k) => ({
+      slug: k.slug,
+      name: k.naam,
+      href: `${BASE}${k.slug}/`,
+      campaigns: campagnes
+        .filter((c) => c.klant === k.id)
+        .map((c) => ({
+          name: c.slug ? c.naam || c.slug : 'Losse set',
+          href: c.slug ? `${BASE}${k.slug}/${c.slug}/` : `${BASE}${k.slug}/`,
+          ads: count[c.id] || 0,
+          updatedAt: c.bijgewerkt,
+        })),
+    }))
+    .filter((k) => k.campaigns.length > 0);
 }
 
 const COPY_KINDS = [
@@ -147,7 +167,7 @@ const COPY_KINDS = [
 
 // Copy lines are shaped like ads ({ id, name, format, brand }) so decisions,
 // server sync and the CSV export treat them the same. The id holds the
-// position: reordering the texts in ads.json moves their decisions along.
+// position: reordering the texts moves their decisions along.
 function copyGroups(copy, clientName) {
   if (!copy) return [];
   return COPY_KINDS.map(({ kind, field, title: titleKey }) => {
@@ -165,12 +185,12 @@ function copyGroups(copy, clientName) {
   }).filter((group) => group.items.length > 0);
 }
 
-/** Path to an ad image of the current client/campaign. */
+/** URL of an ad image or avatar (already a full URL since the ads live in PocketBase). */
 export function adImageUrl(file) {
-  return `${client.root}ads/${scopeDir()}${file}`;
+  return file;
 }
 
-/** Link to one campaign of the current (archive) client. */
+/** Link to one campaign of the current client. */
 export function campaignUrl(campaignSlug) {
-  return `${client.root}${client.slug}/${campaignSlug}/`;
+  return `${BASE}${client.slug}/${campaignSlug}/`;
 }

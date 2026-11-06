@@ -138,10 +138,6 @@ export default function App() {
       {status === 'error' && (
         <div className="state-msg state-error">
           <p>{t('loadError')} {error}</p>
-          <p className="state-hint">
-            Zorg dat <code>public/ads/{client.slug}/{client.campaign ? `${client.campaign}/` : ''}ads.json</code> bestaat
-            en naar bestaande PNG&apos;s verwijst.
-          </p>
         </div>
       )}
 
@@ -149,8 +145,7 @@ export default function App() {
 
       {status === 'ready' && ads.length === 0 && (
         <p className="state-msg">
-          {t('noAds')} Voeg PNG&apos;s toe in{' '}
-          <code>public/ads/{client.slug}/{client.campaign ? `${client.campaign}/` : ''}</code>.
+          {t('noAds')}
         </p>
       )}
 

@@ -19,62 +19,29 @@ npm run build    # productiebuild in dist/
 npm run lint
 ```
 
-## Eén map en één link per klant
-Elke klant heeft een eigen map in `public/ads/` en daarmee een eigen link:
+## Waar de ads staan
+Sinds november 2026 staan klanten, campagnes, teksten en beelden in **PocketBase** op
+`db.vdveen.online` (collecties `adshowcase_klanten`, `adshowcase_campagnes`, `adshowcase_ads`).
+Een wijziging in het dashboard is na herladen meteen live, zonder git of deploy.
 
-| Map | Link |
+| Link | Toont |
 |---|---|
-| `public/ads/gehandicaptekind/` | `…/meta-ad-showcase/gehandicaptekind/` |
-| `public/ads/hamlin/` | `…/meta-ad-showcase/hamlin/` |
+| `db.vdveen.online/showcase/<klant>/` | de losse set van de klant (campagne met lege slug), anders de campagnekiezer (`in_lijst` aan) |
+| `db.vdveen.online/showcase/<klant>/<campagne>/` | één campagne |
+| `db.vdveen.online/showcase/` | Het Gehandicapte Kind (`DEFAULT_CLIENT`) |
+| `db.vdveen.online/showcase/overzicht-840415de/` | Victors overzicht van alles |
 
-De link zonder klant erachter (`…/meta-ad-showcase/`) toont de set van Het
-Gehandicapte Kind: die link was al gedeeld voordat de klantmappen er waren
-(`DEFAULT_CLIENT` in `src/lib/ads.js`).
+- **Concept**: zet `actief` uit, dan zien klanten de campagne niet.
+- **`item_id` nooit wijzigen**: daar hangen de beoordelingen aan.
+- De oude links op GitHub Pages (`…github.io/meta-ad-showcase/…`) sturen door naar hetzelfde pad
+  op db.vdveen.online (`pages-redirect/`).
 
-De repo is openbaar: wie de repo vindt, kan de mappen van alle klanten zien.
-
-## Advertenties toevoegen
-**Vanuit meta-ad-creator (aanbevolen):** maak een batch en klik op **Zet in
-showcase**. De advertenties (verkleind tot JPEG, enkele honderden KB per stuk) en `ads.json` komen dan in `public/ads/<klant>/` te staan. De
-knop werkt alleen in de lokale creator (`npm run dev` / `start.command`). Bestaande
-advertenties met hetzelfde `id` worden vervangen, de rest blijft staan.
-
-**Met de hand:** zet de afbeeldingen (liefst JPEG van 1080 px breed) in `public/ads/<klant>/` en vul
-`public/ads/<klant>/ads.json`:
-
-```json
-{
-  "client": "Follow This",
-  "ads": [
-    { "id": "follow-this-001", "file": "ft-001.png", "name": "Volg de natuur", "format": "1:1", "brand": "Follow This" }
-  ]
-}
-```
-
-> `id` moet stabiel zijn — goedkeuringen worden erop gekoppeld — en uniek over alle
-> klanten heen. Begin het daarom met de klantmap-naam.
-
-Live gaat het pas na een push naar `main` (GitHub Pages bouwt dan opnieuw). Bij de
-build krijgt elke klantmap een eigen `index.html`; een nieuwe klantmap werkt in
-`npm run dev` meteen.
-
-## Beslissingen ophalen
-Beslissingen komen binnen in PocketBase, collectie **adshowcase_beoordelingen** op
-`db.vdveen.online`: één regel per advertentie of tekst, altijd de laatste stand. De
-kolom `klant` is de klantmap-naam.
-
-Iedereen met de link ziet en wijzigt dezelfde beoordelingen. De knop **Exporteer CSV**
-blijft werken als reservekopie (kolommen: id, name, format, brand, status, comment,
-updatedAt).
-
-### Nieuwe ronde
-De database koppelt op `id`. Gebruik voor een nieuwe ronde nieuwe id's in `ads.json`;
-oude regels blijven dan staan zonder de nieuwe ronde te beïnvloeden.
-
-### Collectie opnieuw aanmaken
+## Scripts
 ```bash
-node --env-file=../me-timer/.env.migratie.local scripts/pocketbase-setup.mjs
+# public/ads → PocketBase (idempotent; ook voor één klant of klant/campagne)
+node --env-file=../me-timer/.env.migratie.local scripts/import-ads-naar-pocketbase.mjs [klant[/campagne]]
+# controle: PocketBase tegen public/ads, teksten én beelden
+node scripts/vergelijk-met-pocketbase.mjs
+# app, migratie en mailhook naar de server (alleen bij codewijzigingen)
+./pocketbase/app-naar-server.sh
 ```
-Het serveradres staat in `.env` (`VITE_POCKETBASE_URL`). Dat is niet geheim; leeg laten
-betekent alleen lokaal opslaan. De map `apps-script/` is de oude Google Sheet-koppeling
-en wordt niet meer gebruikt.

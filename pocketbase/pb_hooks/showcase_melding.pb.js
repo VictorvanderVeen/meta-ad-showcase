@@ -8,7 +8,7 @@
 cronAdd("showcaseMelding", "*/5 * * * *", () => {
   const lib = require(`${__hooks}/afspraak_lib.js`);
   const STIL_MS = 10 * 60e3;
-  const SHOWCASE = "https://victorvanderveen.github.io/meta-ad-showcase/";
+  const SHOWCASE = "https://db.vdveen.online/showcase/";
   const STAND = __hooks + "/../showcase_melding.json"; // {start, klanten: {slug: laatst gemelde ms}}
   const MAAND = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
   const DAG = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
@@ -40,8 +40,7 @@ cronAdd("showcaseMelding", "*/5 * * * *", () => {
 
     let naam = klant;
     try {
-      const res = $http.send({ url: SHOWCASE + "ads/" + klant + "/campaigns.json", timeout: 10 });
-      if (res.statusCode === 200 && res.json.client) naam = res.json.client;
+      naam = $app.findFirstRecordByData("adshowcase_klanten", "slug", klant).getString("naam") || klant;
     } catch (_) {}
 
     const tel = { approved: 0, rejected: 0, pending: 0 };
